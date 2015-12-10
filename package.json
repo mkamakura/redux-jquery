@@ -1,0 +1,39 @@
+{
+  "name": "redux-example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint example",
+    "build": "globify \"example/**/js/index.js\" --outfile=build",
+    "watch": "globify \"example/**/js/index.js\" --outfile=build -d -w"
+  },
+  "author": "Masaya Kamakura <kamakura.masaya@gmail.com> (https://github.com/mkamakura)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^4.1.6",
+    "eslint-plugin-babel": "^3.0.0",
+    "jquery": "2.1.4",
+    "redux": "3.0.4",
+    "redux-logger": "2.2.1"
+  },
+  "devDependencies": {
+    "babel": "6.3.13",
+    "babelify": "6.3.0",
+    "eslint": "^1.10.3",
+    "globify": "1.2.1"
+  },
+  "engines": {
+    "node": ">=5.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "sourceMap": true
+        }
+      ]
+    ]
+  }
+}
