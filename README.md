@@ -6,5 +6,4 @@ Reduxを使いたいけどReactは使(いたくない|えない)人向けサン�
 
 - [x] Counter
 - [x] Greeting
-- [ ] Reducerが複数あるバターン
-- [ ] 非同期処理が入ったパターン
+- [x] Weather(async)

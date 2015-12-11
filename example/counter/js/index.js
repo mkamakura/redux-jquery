@@ -6,8 +6,7 @@ import createLogger from 'redux-logger';
 import { RootReducer } from './reducers/Root';
 import Counter from './components/Counter';
 
-const logger = createLogger();
-const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
+const createStoreWithMiddleware = applyMiddleware(createLogger())(createStore);
 const store = createStoreWithMiddleware(RootReducer);
 
 domReady(() => {

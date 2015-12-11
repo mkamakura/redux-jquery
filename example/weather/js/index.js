@@ -1,14 +1,15 @@
 import domReady from '../../utils/domReady';
 
 import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 
 import { RootReducer } from './reducers/Root';
-import Greeting from './components/Greeting';
+import Weather from './components/Weather';
 
-const createStoreWithMiddleware = applyMiddleware(createLogger())(createStore);
+const createStoreWithMiddleware = applyMiddleware(createLogger(), thunk)(createStore);
 const store = createStoreWithMiddleware(RootReducer);
 
 domReady(() => {
-  new Greeting('.greeting', store);
+  new Weather('.weather', store);
 });
