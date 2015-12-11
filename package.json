@@ -1,5 +1,5 @@
 {
-  "name": "redux-example",
+  "name": "redux-jquery",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,6 @@
   "author": "Masaya Kamakura <kamakura.masaya@gmail.com> (https://github.com/mkamakura)",
   "license": "MIT",
   "dependencies": {
-    "babel-eslint": "4.1.6",
-    "eslint-plugin-babel": "3.0.0",
     "jquery": "2.1.4",
     "redux": "3.0.4",
     "redux-logger": "2.2.1"
@@ -20,7 +18,9 @@
   "devDependencies": {
     "babel": "6.3.13",
     "babelify": "6.3.0",
+    "babel-eslint": "4.1.6",
     "eslint": "1.10.3",
+    "eslint-plugin-babel": "3.0.0",
     "globify": "1.2.1"
   },
   "engines": {

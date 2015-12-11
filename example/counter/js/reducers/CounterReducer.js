@@ -1,5 +1,5 @@
 import { INCREMENT, DECREMENT } from '../actions/ActionCreater';
-import defineReducer from '../utils/DefineReducer';
+import defineReducer from '../../../utils/DefineReducer';
 
 const initialState = 0;
 

@@ -4,12 +4,12 @@ import { createStore, applyMiddleware } from 'redux';
 import createLogger from 'redux-logger';
 
 import { RootReducer } from './reducers/Root';
-import Counter from './components/Counter';
+import Greeting from './components/Greeting';
 
 const logger = createLogger();
 const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
 const store = createStoreWithMiddleware(RootReducer);
 
 domReady(() => {
-  new Counter('.counter', store);
+  new Greeting('.greeting', store);
 });
