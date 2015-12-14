@@ -1,5 +1,7 @@
 # 目次
 
+## はじめに
+
 * [Reduxの概要](docs/redux.md)
 * [ES6](docs/es6.md)
 
