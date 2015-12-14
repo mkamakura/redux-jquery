@@ -61,7 +61,7 @@ dispatch(addTodo(text))
 
 `store`は必ず1つのみ。`state`ごとにロジックを分割したい場合は、`store`を分割せずに`reducer composition`を使用してください。
 
-`store`をつくるには、`combineReducer`でつくられた`reducer`をcreateStore()へ渡します。
+`store`をつくるには、`combineReducer`でつくられた`reducer`を`createStore()`へ渡します。
 
  import { createStore } from 'redux'
  import todoApp from './reducers'
