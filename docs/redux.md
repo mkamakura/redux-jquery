@@ -46,10 +46,11 @@ function addTodo(text) {
 }
 ```
 
-dispatchするときはcreatorで作成したactionを渡します。
+`dispatch`するときは`creator`で作成した`action`を渡します。
 
- dispatch(addTodo(text))
- dispatch(completeTodo(index))
+```
+dispatch(addTodo(text))
+```
 
 ### Store
 
