@@ -1,4 +1,4 @@
 # Summary
 
-* [first](doc/first.md)
+* [first](docs/first.md)
 
