@@ -70,7 +70,6 @@ const store = createStore(todoApp);
 ```
 
 ### Reducer
-
 - 現在の`state`と`action`を受けて新しい`state`を返すだけの純粋なメソッド
  
 ```js
@@ -78,28 +77,15 @@ const store = createStore(todoApp);
 ```
 
 `reducer`の中で以下のことをやってはいけません
-- 引数のstate, actionインスタンスの値を変更する
-- 副作用をおこす(APIを呼んだり、ルーティングを変えるなどなど)
-- 毎回値が変わるもの(Date.now() や Math.random())を扱う
-
-
-Reduxでは最初にreducerはstateがundefinedで呼び出します。その際に初期値を設定します。
-
- import { VisibilityFilters } from './actions'
-
- const initialState = {
-   visibilityFilter: VisibilityFilters.SHOW_ALL,
-   todos: []
- }
-
- function todoApp(state, action) {
-   if (typeof state === 'undefined') {
-     return initialState
-   }
-
-   // For now, don’t handle any actions
-   // and just return the state given to us.
-   return state
- }
+- 引数の`state`, `action`インスタンスの値を変更する
+- 副作用を起こす(APIを呼んだり、ルーティングを変えるなどなど)
+- 毎回値が変わるもの(`Date.now()`や`Math.random()`)を扱う
 
 ### Middleware
+- `dispatch`する前後にそれぞれ任意の処理を追加することができる仕組み
+- dispatch前と後のstateの状態をログイン出力する
+- 特定の条件を満たす場合にdispatchしないなど
+- npmに有志によって実装されたMiddlewareが上がっているので適宜使用する https://www.npmjs.com/search?q=redux%20middleware
+
+## データフロー
+WIP
