@@ -1,7 +1,7 @@
 # Summary
 
 * [Reduxの概要](docs/redux.md)
-* [ES6の文法](docs/es6.md)
+* [サンプルで使用するES6](docs/es6.md)
 
 ## サンプルコードの説明
 
