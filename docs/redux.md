@@ -17,4 +17,28 @@ http://rackt.org/redux/docs/introduction/ThreePrinciples.html
 
 |3.Mutations are written as pure functions(変更はすべてpureな関数で書かれる)|
 |-|
-||
+|アクションがどのように状態を変更するかを`Reducer`で行う。`Reducer`は状態とアクションを受けて新しい状態を返す関数である。現在の`state`を変更することはせずに、新しい`state`オブジェクトを作って返すというのがポイント。最初はアプリケーションで一つの`Reducer`を用意して、巨大化してきたら`Reducer`を分割していく。|
+
+## 用語
+
+### Action
+- アプリケーションからの情報を`store`へ送る為のオブジェクト
+- `store.dispatch()`で`store`へ送られる
+- 何を行なうものかを識別するために`type`プロパティを必ず持つ。この`type`を`ActionType`と呼ぶ。
+
+```js
+const ADD_TODO = 'ADD_TODO';
+{
+  type: ADD_TODO,
+  text: 'Build my first Redux app'
+};
+```
+
+### ActionCreator
+
+
+### Store
+
+### Reducer
+
+### Middleware
