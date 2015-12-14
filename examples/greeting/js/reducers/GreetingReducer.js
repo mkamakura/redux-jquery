@@ -1,4 +1,4 @@
-import { UPDATE_NAME } from '../actions/ActionCreater';
+import { UPDATE_NAME } from '../actions/ActionCreator';
 import defineReducer from '../../../utils/DefineReducer';
 
 const initialState = '';

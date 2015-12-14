@@ -7,8 +7,8 @@
     "eslint": "eslint example",
     "build:gitbook": "gitbook build",
     "serve:gitbook": "gitbook serve",
-    "build": "globify \"example/**/js/index.js\" --outfile=build",
-    "watch": "globify \"example/**/js/index.js\" --outfile=build -d -w"
+    "build": "globify \"examples/**/js/index.js\" --outfile=build",
+    "watch": "globify \"examples/**/js/index.js\" --outfile=build -d -w"
   },
   "author": "Masaya Kamakura <kamakura.masaya@gmail.com> (https://github.com/mkamakura)",
   "license": "MIT",

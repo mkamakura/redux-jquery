@@ -1,4 +1,4 @@
-import { UPDATE_WEATHER } from '../actions/ActionCreater';
+import { UPDATE_WEATHER } from '../actions/ActionCreator';
 import defineReducer from '../../../utils/DefineReducer';
 
 const initialState = [];

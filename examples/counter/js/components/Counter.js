@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import * as actions from '../actions/ActionCreater';
+import * as actions from '../actions/ActionCreator';
 
 export default class Counter {
   constructor(selector, store) {
