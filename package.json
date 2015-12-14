@@ -22,10 +22,11 @@
   },
   "devDependencies": {
     "babel": "6.3.13",
-    "babelify": "6.3.0",
     "babel-eslint": "4.1.6",
+    "babelify": "6.3.0",
     "eslint": "1.10.3",
     "eslint-plugin-babel": "3.0.0",
+    "gitbook-plugin-include-codeblock": "1.5.0",
     "globify": "1.2.1"
   },
   "engines": {
