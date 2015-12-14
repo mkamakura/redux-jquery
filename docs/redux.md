@@ -1,8 +1,7 @@
 # Reduxの概要
 
-初歩的な概念しか記載していませんが、以下の用語やデータフローは最低限理解しておきましょう。
-
 - [公式サイト](http://rackt.org/redux/index.html)
+- 初歩的な概念しか記載していませんが、以下の用語やデータフローは最低限理解しておきましょう。
 
 ## 3原則
 http://rackt.org/redux/docs/introduction/ThreePrinciples.html
@@ -37,7 +36,7 @@ const ADD_TODO = 'ADD_TODO';
 ### ActionCreator
 Actionを作る関数である。
 
-```
+```js
 function addTodo(text) {
   return {
     type: ADD_TODO,
@@ -49,7 +48,7 @@ function addTodo(text) {
 `dispatch`するときは`creator`で作成した`action`を渡します。
 
 ```
-dispatch(addTodo(text))
+dispatch(addTodo(text));
 ```
 
 ### Store
@@ -83,8 +82,8 @@ const store = createStore(todoApp);
 
 ### Middleware
 - `dispatch`する前後にそれぞれ任意の処理を追加することができる仕組み
-- dispatch前と後のstateの状態をログイン出力する
-- 特定の条件を満たす場合にdispatchしないなど
+- `dispatch`前後の`state`の状態をログ出力する
+- 特定の条件を満たす場合に`dispatch`しないなど
 - npmに有志によって実装されたMiddlewareが上がっているので適宜使用する https://www.npmjs.com/search?q=redux%20middleware
 
 ## データフロー
