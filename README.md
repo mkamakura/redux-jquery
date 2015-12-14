@@ -4,6 +4,6 @@ Reduxを使いたいけどReactは使(いたくない|えない)人向けサン�
 
 ## 実装済みサンプル
 
-- [x] Counter
-- [x] Greeting
-- [x] Weather(async)
+- Counter
+- Greeting
+- Weather(async)
