@@ -1,6 +1,7 @@
 # redux-jquery
 
-Reduxを使いたいけどReactは使(いたくない|えない)人向けサンプル
+- Redux+jQueryを用いたサンプル集
+- **Reactは使用しません**
 
 ## 実装済みサンプル
 
