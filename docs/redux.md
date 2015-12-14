@@ -66,7 +66,7 @@ dispatch(addTodo(text))
 ```
 import { createStore } from 'redux';
 import todoApp from './reducers';
-let store = createStore(todoApp);
+const store = createStore(todoApp);
 ```
 
 ### Reducer
