@@ -9,4 +9,4 @@
 WIP
 
 ## GitBook
-WIP
+https://www.gitbook.com/book/mkamakura/redux-jquery/details
