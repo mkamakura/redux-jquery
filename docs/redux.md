@@ -35,7 +35,19 @@ const ADD_TODO = 'ADD_TODO';
 ```
 
 ### ActionCreator
+Actionを作る関数。
 
+ function addTodo(text) {
+   return {
+     type: ADD_TODO,
+     text
+   }
+ }
+
+dispatchするときはcreatorで作成したactionを渡します。
+
+ dispatch(addTodo(text))
+ dispatch(completeTodo(index))
 
 ### Store
 
