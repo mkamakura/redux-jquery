@@ -35,14 +35,16 @@ const ADD_TODO = 'ADD_TODO';
 ```
 
 ### ActionCreator
-Actionを作る関数。
+Actionを作る関数である。
 
- function addTodo(text) {
-   return {
-     type: ADD_TODO,
-     text
-   }
- }
+```
+function addTodo(text) {
+  return {
+    type: ADD_TODO,
+    text
+  }
+}
+```
 
 dispatchするときはcreatorで作成したactionを渡します。
 
