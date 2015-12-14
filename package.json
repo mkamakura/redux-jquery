@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "eslint": "eslint example",
+    "build:gitbook": "gitbook build",
+    "serve:gitbook": "gitbook serve",
     "build": "globify \"example/**/js/index.js\" --outfile=build",
     "watch": "globify \"example/**/js/index.js\" --outfile=build -d -w"
   },
