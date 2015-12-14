@@ -53,6 +53,19 @@ dispatch(addTodo(text))
 ```
 
 ### Store
+役割
+- `state`を保持する
+- `state`へアクセスするためのgetState()を提供する
+- `state`を更新するためのdispatch(action)を提供する
+- リスナーを登録するためのsubscribe(listener)を提供する
+
+`store`は必ず1つのみ。`state`ごとにロジックを分割したい場合は、`store`を分割せずに`reducer composition`を使用してください。
+
+storeをつくるには、combineReducerでつくられたreducerをcreateStore()へ渡します。
+
+ import { createStore } from 'redux'
+ import todoApp from './reducers'
+ let store = createStore(todoApp)
 
 ### Reducer
 
