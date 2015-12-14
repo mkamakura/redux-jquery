@@ -41,7 +41,7 @@ Actionを作る関数である。
 function addTodo(text) {
   return {
     type: ADD_TODO,
-    text
+    text: text
   };
 }
 ```
