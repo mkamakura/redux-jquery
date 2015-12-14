@@ -73,7 +73,7 @@ const store = createStore(todoApp);
 - 現在の`state`と`action`を受けて新しい`state`を返すだけの純粋なメソッド
  
 ```js
-(previousState, action) => newState
+(previousState, action) => newState;
 ```
 
 `reducer`の中で以下のことをやってはいけません
