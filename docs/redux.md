@@ -77,10 +77,10 @@ const store = createStore(todoApp);
 (previousState, action) => newState
 ```
 
-reducerの中で以下のことをやってはいけません
- * 引数のstate, actionインスタンスの値を変更する
- * 副作用をおこす(APIを呼んだり、ルーティングを変えるなどなど)
- * 毎回値が変わるもの(Date.now() や Math.random())を扱う
+`reducer`の中で以下のことをやってはいけません
+- 引数のstate, actionインスタンスの値を変更する
+- 副作用をおこす(APIを呼んだり、ルーティングを変えるなどなど)
+- 毎回値が変わるもの(Date.now() や Math.random())を扱う
 
 
 Reduxでは最初にreducerはstateがundefinedで呼び出します。その際に初期値を設定します。
