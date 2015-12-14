@@ -53,7 +53,7 @@ dispatch(addTodo(text))
 ```
 
 ### Store
-役割
+**役割**
 - `state`を保持する
 - `state`へアクセスするための`getState()`を提供する
 - `state`を更新するための`dispatch(action)`を提供する
@@ -63,12 +63,43 @@ dispatch(addTodo(text))
 
 `store`をつくるには、`combineReducer`でつくられた`reducer`を`createStore()`へ渡します。
 
-```
+```js
 import { createStore } from 'redux';
 import todoApp from './reducers';
 const store = createStore(todoApp);
 ```
 
 ### Reducer
+
+- 現在の`state`と`action`を受けて新しい`state`を返すだけの純粋なメソッド
+ 
+```js
+(previousState, action) => newState
+```
+
+reducerの中で以下のことをやってはいけません
+ * 引数のstate, actionインスタンスの値を変更する
+ * 副作用をおこす(APIを呼んだり、ルーティングを変えるなどなど)
+ * 毎回値が変わるもの(Date.now() や Math.random())を扱う
+
+
+Reduxでは最初にreducerはstateがundefinedで呼び出します。その際に初期値を設定します。
+
+ import { VisibilityFilters } from './actions'
+
+ const initialState = {
+   visibilityFilter: VisibilityFilters.SHOW_ALL,
+   todos: []
+ }
+
+ function todoApp(state, action) {
+   if (typeof state === 'undefined') {
+     return initialState
+   }
+
+   // For now, don’t handle any actions
+   // and just return the state given to us.
+   return state
+ }
 
 ### Middleware
