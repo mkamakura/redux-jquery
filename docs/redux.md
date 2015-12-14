@@ -63,9 +63,11 @@ dispatch(addTodo(text))
 
 `store`をつくるには、`combineReducer`でつくられた`reducer`を`createStore()`へ渡します。
 
- import { createStore } from 'redux'
- import todoApp from './reducers'
- let store = createStore(todoApp)
+```
+import { createStore } from 'redux';
+import todoApp from './reducers';
+let store = createStore(todoApp);
+```
 
 ### Reducer
 
