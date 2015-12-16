@@ -1,16 +1,6 @@
 import { CHANGE_TAB, INITIAL_TODO, ADD_TODO, DELETE_TODO,  COMPLETE_TODO, ACTIVE_TODO } from '../actions/ActionCreator';
+import { TODO_STATUS, TAB } from '../contents/contents';
 import defineReducer from '../../../utils/DefineReducer';
-
-const TODO_STATUS = {
-  ACTIVE: 'ACTIVE',
-  COMPLETED: 'COMPLETED'
-};
-
-const TAB = {
-  ALL: 'ALL',
-  ACTIVE: 'ACTIVE',
-  COMPLETED: 'COMPLETED'
-};
 
 const initialState = {
   tab: TAB.ACTIVE,

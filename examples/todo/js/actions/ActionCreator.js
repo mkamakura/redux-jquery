@@ -26,5 +26,5 @@ export function activeTodo(id) {
 }
 
 export function changeTab(tab) {
-  return { type: CHANGE_TAB, tab }
+  return { type: CHANGE_TAB, tab };
 }
