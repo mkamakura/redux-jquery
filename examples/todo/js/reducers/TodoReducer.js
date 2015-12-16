@@ -29,7 +29,7 @@ export default defineReducer(initialState, {
     return {tab: TAB.ACTIVE, todo: todo};
   },
   [ADD_TODO]: (state, action) => {
-    if ([...action.text].length === 0) return state;
+    if (action.text === '') return state;
     return {tab: state.tab, todo: [
       {
         id: state.todo.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
