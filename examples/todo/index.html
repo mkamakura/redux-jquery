@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redux-TODO</title>
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="todo">
+	<h2>TODO LIST</h2>
+	<input type="text" class="input-todo"/>
+	<button class="add-button">Add</button>
+	<div class="todo-list"></div>
+	<button class="all-button">ALL</button>
+	<button class="active-button">Active</button>
+	<button class="complete-button">Complete</button>
+</div>
+<script src="../../build/todo/js/index.js"></script>
+<div class="todo-template" style="display:none">
+	<span class="todo-text">TODO</span>
+	<span class="complete">Complete</span>
+	<span class="active">Active</span>
+	<span class="delete">Delete</span>
+	<hr/>
+</div>
+<script type="application/json" class="initialData">
+	[
+		{"id": 1, "text": "Counter", "status": "COMPLETED"},
+		{"id": 2, "text": "Greeting", "status": "COMPLETED"},
+		{"id": 3, "text": "Weather", "status": "ACTIVE"},
+		{"id": 4, "text": "TODO", "status": "ACTIVE"}
+	]
+</script>
+</body>
+</html>
