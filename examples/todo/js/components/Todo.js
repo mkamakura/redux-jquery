@@ -44,13 +44,13 @@ export default class Todo {
     if (todo.status === TODO_STATUS.COMPLETED) {
       $template.addClass('completed');
       $template.find('.complete').hide();
-      $template.find('.active').on('click', (e) => this.dispatch(actions.activeTodo(todo.id)));
+      $template.find('.active').on('click', () => this.dispatch(actions.activeTodo(todo.id)));
     }
     if (todo.status === TODO_STATUS.ACTIVE) {
       $template.find('.active').hide();
-      $template.find('.complete').on('click', (e) => this.dispatch(actions.completeTodo(todo.id)));
+      $template.find('.complete').on('click', () => this.dispatch(actions.completeTodo(todo.id)));
     }
-    $template.find('.delete').on('click', (e) => this.dispatch(actions.deleteTodo(todo.id)));
+    $template.find('.delete').on('click', () => this.dispatch(actions.deleteTodo(todo.id)));
     this.$todoList.append($template);
   }
 }

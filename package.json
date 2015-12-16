@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint example",
+    "eslint": "eslint examples",
     "build:gitbook": "gitbook build",
     "serve:gitbook": "gitbook serve",
     "build": "globify \"examples/**/js/index.js\" --outfile=build",
