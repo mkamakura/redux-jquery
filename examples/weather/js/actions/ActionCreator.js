@@ -6,7 +6,7 @@ const WEATHER_API = 'http://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp&A
 const API_KEY = '329465fbebeb9beb21a9d76142de6ce8';
 
 function receiveWeather(weather) {
-  return { type: UPDATE_WEATHER, weather: weather };
+  return { type: UPDATE_WEATHER, weather };
 }
 
 export function updateWeather() {
