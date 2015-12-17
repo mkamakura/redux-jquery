@@ -97,5 +97,6 @@ console.log(admin.say()); // [Administrator] My name is Bob
 
 ## 参考資料
 - https://babeljs.io/
+- https://babeljs.io/docs/learn-es2015/
 - http://sssslide.com/www.slideshare.net/teppeis/es6-in-practice
 - https://kangax.github.io/compat-table/es6/
