@@ -28,6 +28,6 @@ JavaScriptエンジン(Webkit,V8等)の実装は現在進行中でまだ使え�
 さらに勉強したい方のために参考資料を残しておきます。
 
 ## 参考資料
-https://babeljs.io
+https://babeljs.io/
 http://sssslide.com/www.slideshare.net/teppeis/es6-in-practice
 https://kangax.github.io/compat-table/es6/
