@@ -1,7 +1,7 @@
 ## Table of Contents
 
 * [Read Me](/README.md)
-* [Reduxの概要](docs/redux.md)
+* [Redux overview](docs/redux.md)
 * [ES6 first step](docs/es6.md)
 * [Examples](docs/examples/README.md)
  * [Counter](docs/examples/counter.md)
