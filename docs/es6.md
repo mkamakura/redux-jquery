@@ -74,7 +74,7 @@ class User {
   }
 
   say() {
-    return 'My name is ' + this.name;
+    return `My name is ${this.name}`;
   }
 }
 
