@@ -15,6 +15,16 @@
 JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中でまだ使えない機能もあります。
 [こちら](https://kangax.github.io/compat-table/es6/)のサイトで各ブラウザに実装済みの機能が確認できます。
 
+ブラウザとJavaScriptエンジンの対応は以下の表のとおりです。
+
+|ブラウザ|JavaScriptエンジン|
+|-|-|
+|IE|Chakra|
+|Chrome|V8|
+|Opera|V8|
+|Safari|JavaScriptCore|
+|FireFox|SpiderMonkey
+
 `Babel`は`ES6`のコードを`ES5`のコードにトランスパイルしてくれるツールです。[公式サイト](https://babeljs.io/)
 来年以降の`ES2016`,`ES2017`についても先行実装されているので今後も使用され続けると言われています。
 実際の開発でも`Babel`を使ってトランスパイルしてブラウザはトランスパイル後のJavaScriptコードを読み込むことになります。
