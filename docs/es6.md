@@ -26,7 +26,7 @@ JavaScriptエンジン(Webkit,V8等)の実装は現在進行中でまだ使え�
 functionを`=>`に置換できます。
 
 ```js
-//ES5
+// ES5
 $('.hoge').on('change', function(event) {
   console.log(event);
 }
