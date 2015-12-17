@@ -96,6 +96,6 @@ console.log(admin.say()); // [Administrator] My name is Bob
 さらに勉強したい方のために参考資料を残しておきます。
 
 ## 参考資料
-https://babeljs.io/
-http://sssslide.com/www.slideshare.net/teppeis/es6-in-practice
-https://kangax.github.io/compat-table/es6/
+- https://babeljs.io/
+- http://sssslide.com/www.slideshare.net/teppeis/es6-in-practice
+- https://kangax.github.io/compat-table/es6/
