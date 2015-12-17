@@ -13,7 +13,6 @@
   "author": "Masaya Kamakura <kamakura.masaya@gmail.com> (https://github.com/mkamakura)",
   "license": "MIT",
   "dependencies": {
-    "deep-equal": "1.0.1",
     "isomorphic-fetch": "2.2.0",
     "jquery": "2.1.4",
     "redux": "3.0.4",

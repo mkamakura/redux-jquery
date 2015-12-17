@@ -1,23 +1,16 @@
-import $ from 'jquery';
 import * as actions from '../actions/ActionCreator';
+import connect from '../../../utils/connect';
 
 export default class Greeting {
   constructor(selector, store) {
-    this.$selector = $(selector);
-    this.name = store.getState().name;
-    store.subscribe(() => {
-      if (this.name !== store.getState().name) {
-        this.name = store.getState().name;
-        this.render();
-      }
-    });
+    connect(this, selector, store, 'name');
 
     this.$greeting = this.$selector.find('.js-greeting');
     this.$inputName = this.$selector.find('input[name=name]');
-    this.$selector.find('.submit').on('click', () => store.dispatch(actions.updateName(this.$inputName.val())));
+    this.$selector.find('.submit').on('click', () => this.dispatch(actions.updateName(this.$inputName.val())));
   }
 
   render() {
-    this.$greeting.text(`Hello, ${this.name}!!`);
+    this.$greeting.text(`Hello, ${this.state.name}!!`);
   }
 }

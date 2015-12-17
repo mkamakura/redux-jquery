@@ -1,23 +1,16 @@
-import $ from 'jquery';
 import * as actions from '../actions/ActionCreator';
+import connect from '../../../utils/connect';
 
 export default class Counter {
   constructor(selector, store) {
-    this.$selector = $(selector);
-    this.result = store.getState().result;
-    store.subscribe(() => {
-      if (this.result !== store.getState().result) {
-        this.result = store.getState().result;
-        this.render();
-      }
-    });
+    connect(this, selector, store, 'result');
 
     this.$result = this.$selector.find('.js-result');
-    this.$selector.find('.js-increment').on('click', () => store.dispatch(actions.increment()));
-    this.$selector.find('.js-decrement').on('click', () => store.dispatch(actions.decrement()));
+    this.$selector.find('.js-increment').on('click', () => this.dispatch(actions.increment()));
+    this.$selector.find('.js-decrement').on('click', () => this.dispatch(actions.decrement()));
   }
 
   render() {
-    this.$result.text(this.result);
+    this.$result.text(this.state.result);
   }
 }

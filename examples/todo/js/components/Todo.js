@@ -1,19 +1,11 @@
 import $ from 'jquery';
 import { TODO_STATUS, TAB } from '../contents/contents';
 import * as actions from '../actions/ActionCreator';
-import equal from 'deep-equal';
+import connect from '../../../utils/connect';
 
 export default class Todo {
   constructor(selector, store) {
-    this.$selector = $(selector);
-    this.state = store.getState();
-    this.dispatch = store.dispatch;
-    store.subscribe(() => {
-      if (!equal(this.state, store.getState())) {
-        this.state = store.getState();
-        this.render();
-      }
-    });
+    connect(this, selector, store);
 
     this.$todoList = this.$selector.find('.todo-list');
     this.$todoTemplate = $('.todo-template');
