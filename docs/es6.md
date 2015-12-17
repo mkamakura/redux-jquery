@@ -22,7 +22,20 @@ JavaScriptエンジン(Webkit,V8等)の実装は現在進行中でまだ使え�
 ## 新規仕様
 ここでは特によく使われている仕様について説明します。参考資料等を用いてさらに学習してください。
 
-### 
+### Arrow Function
+functionを`=>`に置換できます。
+
+```js
+//ES5
+$('.hoge').on('change', function(event) {
+  console.log(event);
+}
+
+// ES6
+$('.hoge').on('change', (event) => console.log(event));
+// 引数が一つの場合は`()`も省略可能
+$('.hoge').on('change', event => console.log(event));
+```
 
 ## おわりに
 この資料で紹介した機能はES6の仕様でもごく一部です。
