@@ -4,12 +4,14 @@ export const DELETE_TODO = 'DELETE_TODO';
 export const COMPLETE_TODO = 'COMPLETE_TODO';
 export const ACTIVE_TODO = 'ACTIVE_TODO';
 export const CHANGE_TAB = 'CHANGE_TAB';
+export const CANCEL = 'CANCEL';
 
 export function initialTodo(todo) {
   return {type: INITIAL_TODO, todo };
 }
 
 export function addTodo(text) {
+  if (text === '') return { type: CANCEL };
   return { type: ADD_TODO, text };
 }
 

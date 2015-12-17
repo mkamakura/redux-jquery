@@ -1,4 +1,4 @@
-import { CHANGE_TAB, INITIAL_TODO, ADD_TODO, DELETE_TODO, COMPLETE_TODO, ACTIVE_TODO } from '../actions/ActionCreator';
+import { CHANGE_TAB, INITIAL_TODO, ADD_TODO, DELETE_TODO, COMPLETE_TODO, ACTIVE_TODO, CANCEL } from '../actions/ActionCreator';
 import { TODO_STATUS, TAB } from '../contents/contents';
 import defineReducer from '../../../utils/DefineReducer';
 
@@ -19,7 +19,6 @@ export default defineReducer(initialState, {
     return {tab: TAB.ACTIVE, todo: todo};
   },
   [ADD_TODO]: (state, action) => {
-    if (action.text === '') return state;
     return {tab: state.tab, todo: [
       {
         id: state.todo.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
@@ -40,5 +39,6 @@ export default defineReducer(initialState, {
   },
   [CHANGE_TAB]: (status, action) => {
     return Object.assign({}, status, {tab: TAB[action.tab]});
-  }
+  },
+  [CANCEL]: (status) => status
 });
