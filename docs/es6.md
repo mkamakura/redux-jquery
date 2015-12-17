@@ -56,7 +56,7 @@ console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
 
 ### Default Parameters
 関数の引数にデフォルト値を設定できます。
-```
+```js
 function consoleName(name = 'Taro') {
   console.log(`username: ${name}`);
 }
