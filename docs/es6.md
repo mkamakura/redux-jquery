@@ -55,6 +55,15 @@ console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
 ```
 
 ### Default Parameters
+関数の引数にデフォルト値を設定できます。
+```
+function consoleName(name = 'Taro') {
+  console.log(`username: ${name}`);
+}
+
+consoleName(); // console out put 'Taro'
+consoleName('Masaya'); // console out put 'Masaya'
+```
 
 ## おわりに
 この資料で紹介した機能はES6の仕様でもごく一部です。
