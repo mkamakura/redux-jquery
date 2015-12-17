@@ -110,6 +110,12 @@ const admin = new Admin('Bob');
 console.log(admin.say()); // [Administrator] My name is Bob
 ```
 
+### Enhanced Object Literals
+WIP
+
+### Default + Rest + Spread
+WIP
+
 ## おわりに
 この資料で紹介した機能はES6の仕様でもごく一部です。
 さらに勉強したい方のために参考資料を残しておきます。
