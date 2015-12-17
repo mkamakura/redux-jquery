@@ -11,6 +11,9 @@
 当初は`ES6`として仕様検討が始まったためその名残りが残っています。この資料では`ES6`で統一させていただきます。(短いほうが読みやすいので)
 
 ### Babel
+
+**背景**
+
 `ES6`の仕様確定が2015年6月にされましたが、すぐに新仕様が使えるわけではありません。
 JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中でまだ使えない機能もあります。
 [こちら](https://kangax.github.io/compat-table/es6/)のサイトで各ブラウザに実装済みの機能が確認できます。
@@ -24,6 +27,8 @@ JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中�
 |Opera|V8|
 |Safari|JavaScriptCore|
 |FireFox|SpiderMonkey|
+
+**Babel**
 
 `Babel`は`ES6`のコードを`ES5`のコードにトランスパイルしてくれるツールです。[公式サイト](https://babeljs.io/)
 来年以降の`ES2016`,`ES2017`についても先行実装されているので今後も使用され続けると言われています。
