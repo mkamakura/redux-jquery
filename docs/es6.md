@@ -65,6 +65,32 @@ consoleName(); // console out put 'Taro'
 consoleName('Masaya'); // console out put 'Masaya'
 ```
 
+### Class
+クラスの宣言ができます。
+```js
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  say() {
+    return 'My name is ' + this.name;
+  }
+}
+
+class Admin extends User {
+  say() {
+    return `[Administrator] ${super.say()}`;
+  }
+}
+
+const user = new User('Alice');
+console.log(user.say()); // My name is Alice
+
+const admin = new Admin('Bob');
+console.log(admin.say()); // [Administrator] My name is Bob
+```
+
 ## おわりに
 この資料で紹介した機能はES6の仕様でもごく一部です。
 さらに勉強したい方のために参考資料を残しておきます。
