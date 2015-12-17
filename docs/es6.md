@@ -50,7 +50,7 @@ $('.hoge').on('change', function(event) {
 $('.hoge').on('change', (event) => {
   console.log(event));
 }
-// 中身が1行なら`{}`を省略できます
+// 中身が1行なら`{}`を省略可能
 $('.hoge').on('change', (event) => console.log(event));
 // 引数が一つの場合は`()`も省略可能
 $('.hoge').on('change', event => console.log(event));
