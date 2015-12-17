@@ -1,28 +1,20 @@
-import $ from 'jquery';
 import * as actions from '../actions/ActionCreator';
-import equal from 'deep-equal';
+import connect from '../../../utils/connect';
 
 export default class Weather {
   constructor(selector, store) {
-    this.$selector = $(selector);
-    this.weather = store.getState().weather;
-    store.subscribe(() => {
-      if (!equal(this.weather, store.getState().weather)) {
-        this.weather = store.getState().weather;
-        this.render();
-      }
-    });
+    connect(this, selector, store, 'weather');
 
     this.$temp = this.$selector.find('.js-temp');
     this.$tempMax = this.$selector.find('.js-temp-max');
     this.$tempMin = this.$selector.find('.js-temp-min');
-    this.$selector.find('.update').on('click', () => store.dispatch(actions.updateWeather()));
+    this.$selector.find('.update').on('click', () => this.dispatch(actions.updateWeather()));
   }
 
   render() {
-    this.$temp.text(this.convertKtoC(this.weather.main.temp));
-    this.$tempMax.text(this.convertKtoC(this.weather.main.temp_max));
-    this.$tempMin.text(this.convertKtoC(this.weather.main.temp_min));
+    this.$temp.text(this.convertKtoC(this.state.weather.main.temp));
+    this.$tempMax.text(this.convertKtoC(this.state.weather.main.temp_max));
+    this.$tempMin.text(this.convertKtoC(this.state.weather.main.temp_min));
   }
 
   convertKtoC(temp) {
