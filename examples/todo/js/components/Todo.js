@@ -6,11 +6,11 @@ import equal from 'deep-equal';
 export default class Todo {
   constructor(selector, store) {
     this.$selector = $(selector);
-    this.todo = store.getState().todo;
+    this.state = store.getState();
     this.dispatch = store.dispatch;
     store.subscribe(() => {
-      if (!equal(this.todo, store.getState().todo)) {
-        this.todo = store.getState().todo;
+      if (!equal(this.state, store.getState())) {
+        this.state = store.getState();
         this.render();
       }
     });
@@ -31,10 +31,9 @@ export default class Todo {
   }
 
   render() {
-    this.$todoList.empty();
-    this.todo.todo.map((todo) => {
-      if (this.todo.tab === TAB.ALL || this.todo.tab === todo.status) this.renderTodo(todo);
-    });
+    this.$todoList.html(this.state.todo.map((todo) => {
+      if (this.state.tab === TAB.ALL || this.state.tab === todo.status) return this.renderTodo(todo);
+    }));
   }
 
   renderTodo(todo) {
@@ -51,6 +50,6 @@ export default class Todo {
       $template.find('.complete').on('click', () => this.dispatch(actions.completeTodo(todo.id)));
     }
     $template.find('.delete').on('click', () => this.dispatch(actions.deleteTodo(todo.id)));
-    this.$todoList.append($template);
+    return $template;
   }
 }
