@@ -41,16 +41,20 @@ $('.hoge').on('change', event => console.log(event));
 `let`, `const`はブロックスコープの変数宣言かできます。これまで使われていた`var`は使用しないようにしましょう。`let`、`const`のどちらを使うべきかという議論は活発に行われていますが、基本は`const`、どうしても再代入が必要な場合のみ`let`を使用するようにしましょう。
 
 ### Templete Strings
+文字列結合が簡単に書けます。
 ```js
-const errorCode = 404;
-const errorMessage = `file not found`;
-
 // ES5
+var errorCode = 404;
+var errorMessage = `file not found`;
 console.log('Error!! Code: ' + errorCode + ', Message: ' + errorMessage);
 
 // ES6
+const errorCode = 404;
+const errorMessage = `file not found`;
 console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
 ```
+
+### Default Parameters
 
 ## おわりに
 この資料で紹介した機能はES6の仕様でもごく一部です。
