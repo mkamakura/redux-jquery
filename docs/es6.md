@@ -99,7 +99,7 @@ $('.hoge').on('change', (event) => {
 $('.hoge').on('change', (event) => console.log(event));
 ```
 
-**注意点**
+**※注意点**
 
 `this`の扱いが`function`と`=>`で異なります。
 ```js
