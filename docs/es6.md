@@ -7,7 +7,7 @@
 
 ### ES6 or ES2015?
 ネットで検索していると`ES6`と`ES2015`を見かけると思いますが、両方とも同じものを指しています。
-正確には`ES2015`が正しいです。来年以降も`ES2016`,`ES2017`…とアップデート予定です。
+正確には`ES2015`が正しいです。来年以降も`ES2016`,`ES2017`・・・とアップデート予定です。
 当初は`ES6`として仕様検討が始まったためその名残りが残っています。この資料では`ES6`で統一させていただきます。(短いほうが読みやすいので)
 
 ### Babel
@@ -157,7 +157,7 @@ function getNameObject(name) {
   return { name };
 }
 
-// keyを動的に宣言できる
+// keyを動的に宣言
 function getNameObject(name) {
   const nameKey = 'fullName';
   return { [nameKey]: name }
