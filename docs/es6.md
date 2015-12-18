@@ -146,7 +146,23 @@ const statusCode = new StatusCode(200);
 
 
 ### Enhanced Object Literals
-WIP
+オブジェクトが拡張されました。
+```
+// keyとvalueが同じ名前であえば省略可能
+function getNameObject(name) {
+  // ES5
+  return { name: name };
+
+  // ES6
+  return { name };
+}
+
+// keyを動的に宣言できる
+function getNameObject(name) {
+  const nameKey = 'fullName';
+  return { [nameKey]: name }
+}
+```
 
 ### Default + Rest + Spread
 WIP
