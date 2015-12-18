@@ -160,14 +160,14 @@ function getNameObject(name) {
 // keyを動的に宣言可能
 function getNameObject(name) {
   const nameKey = 'fullName';
-  return { [nameKey]: name };
+  return { [nameKey]: name }; // keyに変数を使用
 }
 console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
 
 function getNameObject(name) {
-  return { [(() => 'fullName')()]: name };
+  return { [(() => 'fullName')()]: name }; // keyに関数を使用
 }
-console.log(getNameObject('Masaya Kamakura'));
+console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
 ```
 
 ### Default + Rest + Spread
