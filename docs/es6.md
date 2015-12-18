@@ -54,6 +54,25 @@ const errorMessage = `file not found`;
 console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
 ```
 
+### Class
+クラスの宣言ができます。
+```js
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  say() {
+    return `My name is ${this.name}`;
+  }
+}
+
+class Admin extends User {
+  say() {
+    return `[Administrator] ${super.say()}`;
+  }
+}
+
 ### Arrow Function
 functionを`=>`に置換できます。
 
@@ -108,24 +127,7 @@ consoleName(); // console out put 'Taro'
 consoleName('Masaya'); // console out put 'Masaya'
 ```
 
-### Class
-クラスの宣言ができます。
-```js
-class User {
-  constructor(name) {
-    this.name = name;
-  }
 
-  say() {
-    return `My name is ${this.name}`;
-  }
-}
-
-class Admin extends User {
-  say() {
-    return `[Administrator] ${super.say()}`;
-  }
-}
 
 const user = new User('Alice');
 console.log(user.say()); // My name is Alice
