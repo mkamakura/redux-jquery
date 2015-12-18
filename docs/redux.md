@@ -34,7 +34,7 @@ const ADD_TODO = 'ADD_TODO';
 ```
 
 ### ActionCreator
-Actionを作る関数である。
+Actionを作る関数です。
 
 ```js
 function addTodo(text) {
@@ -69,7 +69,7 @@ const store = createStore(todoApp);
 ```
 
 ### Reducer
-- 現在の`state`と`action`を受けて新しい`state`を返すだけの純粋なメソッド
+- 現在の`state`と`action`を受けて新しい`state`を返すだけの純粋なメソッドです。
  
 ```js
 (previousState, action) => newState;

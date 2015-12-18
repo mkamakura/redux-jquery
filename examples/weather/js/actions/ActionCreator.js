@@ -14,6 +14,6 @@ export function updateWeather() {
     return fetch(`${WEATHER_API}${API_KEY}`)
       .then(response => response.json())
       .then(json => dispatch(receiveWeather(json)))
-      .catch(error => dispatch({ type: '' }));
+      .catch(error => dispatch(error)); // TODO
   };
 }

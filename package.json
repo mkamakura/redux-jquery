@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:eslint": "eslint examples",
-    "test:textlint": "textlint --rule max-ten,spellcheck-tech-word docs",
+    "test:textlint": "textlint --rule max-ten,spellcheck-tech-word,no-mix-dearu-desumasu docs",
     "test": "npm-run-all test:*",
     "build:gitbook": "gitbook build",
     "serve:gitbook": "gitbook serve",
@@ -32,6 +32,7 @@
     "npm-run-all": "1.4.0",
     "textlint": "5.0.3",
     "textlint-rule-max-ten": "2.0.0",
+    "textlint-rule-no-mix-dearu-desumasu": "1.4.0",
     "textlint-rule-spellcheck-tech-word": "4.1.0"
   },
   "engines": {

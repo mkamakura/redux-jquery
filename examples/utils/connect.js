@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 export default function connect(component, selector, store, ...stateNames) {
   component.$selector = $(selector);
+  console.log(stateNames);
   //TODO 複数の場合の処理
   //TODO 下階層のオブジェクトを指定できるように
   //component.state = (stateNames ? store.getState() : store.getState().stateNames);
