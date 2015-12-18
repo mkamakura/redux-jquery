@@ -168,9 +168,16 @@ console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
 ```
 
 ### Spread
-```
+配列を展開して返します。
+配列に要素を追加して、新しい配列を作るときによく利用されます。
+```js
 const list = [1, 2, 3];
 console.log(...list); // 1 2 3
+
+// 先頭に要素を追加する
+const list = [1, 2, 3];
+const newList = [0, ...list];
+console.log(newList); // [0, 1, 2, 3]
 ```
 
 ## おわりに
