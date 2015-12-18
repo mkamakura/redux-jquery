@@ -44,8 +44,8 @@ JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中�
 var a = 1;
 
 // ES6
-let b = 1; // 再代入不可能な変数
-const c = 1; // 定数（再代入不可、推奨）
+let b = 1; // 再代入不可能な値（再代入が必要なときのみ使用する）
+const c = 1; // 再代入不可な値（推奨）
 ```
 
 ### Templete Strings
