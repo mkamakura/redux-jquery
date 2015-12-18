@@ -37,6 +37,9 @@ JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中�
 ## 新規仕様
 ここでは特によく使われている仕様について説明します。参考資料等を用いてさらに学習してください。
 
+### let, const
+`let`, `const`はブロックスコープの変数宣言かできます。`const`は再代入不可な値を宣言します。これまで使われていた`var`は使用しないようにしましょう。基本は`const`、どうしても再代入が必要な場合のみ`let`を使用するようにしましょう。
+
 ### Arrow Function
 functionを`=>`に置換できます。
 
@@ -57,11 +60,26 @@ $('.hoge').on('change', (event) => console.log(event));
 **注意点**
 
 `this`の扱いが`function`と`=>`で異なります。
+```js
+function log() {
+  this.name = 'Masaya';
+  
+  // 1 想定通りの動作
+  function print() {
+    console.log(this.name);
+  }
+  // 2 想定通りの動作
+  print () => console.log(this.name);
+  
+  // 3 nameがundefinedになる
+  print () => {
+    console.log(this.name);
+  }
+}
+```
 
 
 
-### let, const
-`let`, `const`はブロックスコープの変数宣言かできます。`const`は再代入不可な値を宣言します。これまで使われていた`var`は使用しないようにしましょう。`let`、`const`のどちらを使うべきかという議論は活発に行われていますが、基本は`const`、どうしても再代入が必要な場合のみ`let`を使用するようにしましょう。
 
 ### Templete Strings
 文字列結合が簡単に書けます。
