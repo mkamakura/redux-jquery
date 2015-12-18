@@ -68,7 +68,7 @@ class User {
   }
 }
 
-// Userクラスを継承してAdminクラスをつく
+// Userクラスを継承してAdminクラスを作る
 class Admin extends User {
   say() {
     return `[Administrator] ${super.say()}`;
@@ -103,21 +103,25 @@ $('.hoge').on('change', (event) => console.log(event));
 
 `this`の扱いが`function`と`=>`で異なります。
 ```js
-function log() {
-  this.name = 'Masaya';
+class Log {
+  constructor() {
+    this.statusCode = '200';
+    
+    setTimeout(() => {
+      console.log(this.statusCode, 'OK');
+    }, 1000);
+    
+    setTimeout(() => console.log(this.statusCode, 'OK'), 1000);
   
-  // 1 想定通りの動作
-  function print() {
-    console.log(this.name);
-  }
-  // 2 想定通りの動作
-  print () => console.log(this.name);
-  
-  // 3 nameがundefinedになる
-  print () => {
-    console.log(this.name);
+    self = this;
+    setTimeout(function() {
+      console.log(this.statusCode, 'NG');
+      console.log(self.statusCode, 'OK')
+    }, 1000)
   }
 }
+
+new Log();
 ```
 
 
