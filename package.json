@@ -25,8 +25,6 @@
     "babel": "6.3.13",
     "babel-eslint": "4.1.6",
     "babelify": "6.3.0",
-    "codemirror-console": "0.1.0",
-    "codemirror-console-ui": "1.0.0",
     "eslint": "1.10.3",
     "eslint-plugin-babel": "3.0.0",
     "gitbook-plugin-include-codeblock": "1.5.0",
