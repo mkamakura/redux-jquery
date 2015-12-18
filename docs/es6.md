@@ -162,6 +162,7 @@ function getNameObject(name) {
   const nameKey = 'fullName';
   return { [nameKey]: name }
 }
+console.log(getNameObject('Masaya Kamakura')
 ```
 
 ### Default + Rest + Spread
