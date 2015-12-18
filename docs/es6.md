@@ -40,6 +40,20 @@ JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中�
 ### let, const
 `let`, `const`はブロックスコープの変数宣言かできます。`const`は再代入不可な値を宣言します。これまで使われていた`var`は使用しないようにしましょう。基本は`const`、どうしても再代入が必要な場合のみ`let`を使用するようにしましょう。
 
+### Templete Strings
+文字列結合が簡単に書けます。
+```js
+// ES5
+var errorCode = 404;
+var errorMessage = `file not found`;
+console.log('Error!! Code: ' + errorCode + ', Message: ' + errorMessage);
+
+// ES6
+const errorCode = 404;
+const errorMessage = `file not found`;
+console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
+```
+
 ### Arrow Function
 functionを`=>`に置換できます。
 
@@ -81,19 +95,7 @@ function log() {
 
 
 
-### Templete Strings
-文字列結合が簡単に書けます。
-```js
-// ES5
-var errorCode = 404;
-var errorMessage = `file not found`;
-console.log('Error!! Code: ' + errorCode + ', Message: ' + errorMessage);
 
-// ES6
-const errorCode = 404;
-const errorMessage = `file not found`;
-console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
-```
 
 ### Default Parameters
 関数の引数にデフォルト値を設定できます。
