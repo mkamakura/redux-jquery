@@ -74,6 +74,13 @@ class Admin extends User {
   }
 }
 
+const user = new User('Alice');
+console.log(user.say()); // My name is Alice
+
+const admin = new Admin('Bob');
+console.log(admin.say()); // [Administrator] My name is Bob
+```
+
 ### Arrow Function
 functionを`=>`に置換できます。
 
@@ -130,12 +137,7 @@ consoleName('Masaya'); // console out put 'Masaya'
 
 
 
-const user = new User('Alice');
-console.log(user.say()); // My name is Alice
 
-const admin = new Admin('Bob');
-console.log(admin.say()); // [Administrator] My name is Bob
-```
 
 ### Enhanced Object Literals
 WIP
