@@ -157,7 +157,7 @@ function getNameObject(name) {
   return { name };
 }
 
-// keyを動的に宣言
+// keyを動的に宣言可能
 function getNameObject(name) {
   const nameKey = 'fullName';
   return { [nameKey]: name }
