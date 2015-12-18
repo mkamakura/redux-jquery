@@ -123,7 +123,7 @@ class StatusCode {
 
 const statusCode = new StatusCode(200);
 ```
-`Allow Function`内の`this`は`StatusCode`クラスの`this`を参照するのに対し、`function()`はグローバオブジェクトの`this`を参照している。
+`Allow Function`内の`this`は`StatusCode`クラスの`this`を参照するのに対し、`function()`はグローバオブジェクトの`this`を参照している。グローバルオブジェクトの`this`に`statusCode`は宣言していないので`undefined`となります。
 
 ### Default Parameters
 関数の引数にデフォルト値を設定できます。
