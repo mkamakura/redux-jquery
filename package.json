@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint examples",
+    "test:eslint": "eslint examples",
+    "test:textlint": "textlint --rule max-ten,spellcheck-tech-word docs",
+    "test": "npm-run-all test:*",
     "build:gitbook": "gitbook build",
     "serve:gitbook": "gitbook serve",
     "build": "globify \"examples/**/js/index.js\" --outfile=build",
@@ -26,7 +28,11 @@
     "eslint": "1.10.3",
     "eslint-plugin-babel": "3.0.0",
     "gitbook-plugin-include-codeblock": "1.5.0",
-    "globify": "1.2.1"
+    "globify": "1.2.1",
+    "npm-run-all": "1.4.0",
+    "textlint": "5.0.3",
+    "textlint-rule-max-ten": "2.0.0",
+    "textlint-rule-spellcheck-tech-word": "4.1.0"
   },
   "engines": {
     "node": ">=5.0.0"
