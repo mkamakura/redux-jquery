@@ -103,9 +103,9 @@ $('.hoge').on('change', (event) => console.log(event));
 
 `this`の扱いが`function`と`=>`で異なります。
 ```js
-class Log {
-  constructor() {
-    this.statusCode = 200;
+class StatusCode {
+  constructor(statusCode) {
+    this.statusCode = statusCode;
     
     setTimeout(() => {
       console.log(this.statusCode, 'OK');
@@ -115,19 +115,15 @@ class Log {
   
     self = this;
     setTimeout(function() {
-      console.log(this.statusCode, 'NG');
+      if (this.statusCode === undefined) console.log('`this.statusCode` is `undefined` in function');
       console.log(self.statusCode, 'OK')
     }, 1000)
   }
 }
 
-const log = new Log();
+const statusCode = new StatusCode(200);
 ```
-
-
-
-
-
+`Allow Function`内の`this`は`StatusCode`クラスの`this`を参照するのに対し、`function()`はグローバオブジェクトの`this`を参照している。
 
 ### Default Parameters
 関数の引数にデフォルト値を設定できます。
