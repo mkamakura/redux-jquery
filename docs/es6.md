@@ -105,7 +105,7 @@ $('.hoge').on('change', (event) => console.log(event));
 ```js
 class Log {
   constructor() {
-    this.statusCode = '200';
+    this.statusCode = 200;
     
     setTimeout(() => {
       console.log(this.statusCode, 'OK');
@@ -121,7 +121,7 @@ class Log {
   }
 }
 
-new Log();
+const log = new Log();
 ```
 
 
