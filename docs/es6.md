@@ -68,6 +68,7 @@ class User {
   }
 }
 
+// Userクラスを継承してAdminクラスをつく
 class Admin extends User {
   say() {
     return `[Administrator] ${super.say()}`;
