@@ -167,8 +167,11 @@ function getNameObject(name) {
 console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
 ```
 
-### Default + Rest + Spread
-WIP
+### Spread
+```
+const list = [1, 2, 3];
+console.log(...list); // 1 2 3
+```
 
 ## おわりに
 この資料で紹介した機能はES6の仕様でもごく一部です。
