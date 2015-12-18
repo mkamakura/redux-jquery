@@ -56,6 +56,7 @@ console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
 
 ### Class
 クラスの宣言ができます。
+
 ```js
 class User {
   constructor(name) {
