@@ -150,12 +150,9 @@ const statusCode = new StatusCode(200);
 ```js
 // keyとvalueが同じ名前であえば省略可能
 function getNameObject(name) {
-  // ES5
-  return { name: name };
-
-  // ES6
   return { name };
 }
+console.log(getNameObject('Masaya Kamakura')); // {"name":"Masaya Kamakura"}
 
 // keyを動的に宣言可能
 function getNameObject(name) {
