@@ -114,7 +114,7 @@ $('.hoge').on('change', function(event) {
 $('.hoge').on('change', (event) => {
   console.log(event));
 }
-// 中身が式なら`{}`を省略可能
+// 中身が式なら`{}`を省略可能で、結果が`return`される
 $('.hoge').on('change', (event) => console.log(event));
 ```
 
@@ -160,9 +160,14 @@ function getNameObject(name) {
 // keyを動的に宣言可能
 function getNameObject(name) {
   const nameKey = 'fullName';
-  return { [nameKey]: name }
+  return { [nameKey]: name };
 }
 console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
+
+function getNameObject(name) {
+  return { [(() => 'fullName')()]: name };
+}
+console.log(getNameObject('Masaya Kamakura'));
 ```
 
 ### Default + Rest + Spread
