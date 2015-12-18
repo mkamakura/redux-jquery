@@ -39,6 +39,14 @@ JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中�
 
 ### let, const
 `let`, `const`はブロックスコープの変数宣言かできます。`const`は再代入不可な値を宣言します。これまで使われていた`var`は使用しないようにしましょう。基本は`const`、どうしても再代入が必要な場合のみ`let`を使用するようにしましょう。
+```js
+// ES5
+var a = 1;
+
+// ES6
+let b = 1; // 再代入不可能な変数
+const c = 1; // 定数（再代入不可、推奨）
+```
 
 ### Templete Strings
 文字列結合が簡単に書けます。
