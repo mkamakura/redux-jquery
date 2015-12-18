@@ -82,6 +82,17 @@ const admin = new Admin('Bob');
 console.log(admin.say()); // [Administrator] My name is Bob
 ```
 
+### Default Parameters
+関数の引数にデフォルト値を設定できます。
+```js
+function consoleName(name = 'Taro') {
+  console.log(`username: ${name}`);
+}
+
+consoleName(); // console out put 'Taro'
+consoleName('Masaya'); // console out put 'Masaya'
+```
+
 ### Arrow Function
 functionを`=>`に置換できます。
 
@@ -124,20 +135,6 @@ class StatusCode {
 const statusCode = new StatusCode(200);
 ```
 `Allow Function`内の`this`は`StatusCode`クラスの`this`を参照するのに対し、`function()`はグローバオブジェクトの`this`を参照している。グローバルオブジェクトの`this`に`statusCode`は宣言していないので`undefined`となります。
-
-### Default Parameters
-関数の引数にデフォルト値を設定できます。
-```js
-function consoleName(name = 'Taro') {
-  console.log(`username: ${name}`);
-}
-
-consoleName(); // console out put 'Taro'
-consoleName('Masaya'); // console out put 'Masaya'
-```
-
-
-
 
 
 ### Enhanced Object Literals
