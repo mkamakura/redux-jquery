@@ -15,7 +15,7 @@
 **背景**
 
 `ES6`の仕様確定が2015年6月にされましたが、すぐに新仕様が使えるわけではありません。
-JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中でまだ使えない機能もあります。
+JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中でまだ使えない機能が。
 [こちら](https://kangax.github.io/compat-table/es6/)のサイトで各ブラウザに実装済みの機能が確認できます。
 
 ブラウザとJavaScriptエンジンの対応は以下の表のとおりです。
@@ -30,8 +30,8 @@ JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中�
 
 **Babel**
 
-上記のようにブラウザに新仕様が追加されるの待っていてはいつまで経っても新仕様を試すことがきません。そこで登場したのが`Babel`で、`Babel`は`ES6`のコードを`ES5`のコードにトランスパイルしてくれるツールです。[公式サイト](https://babeljs.io/)
-来年以降の`ES2016`,`ES2017`についても先行実装されているので今後も使用され続けると言われています。
+上記のようにブラウザに新仕様が追加されるの待っていてはすぐに新仕様を試すことがきません。そこで登場したのが`Babel`で、`Babel`は`ES6`のコードを`ES5`のコードにトランスパイルしてくれるツールです。([公式サイト](https://babeljs.io/)
+)来年以降の`ES2016`,`ES2017`についても先行実装されているので今後も使用され続けると言われています。
 実際の開発でも`Babel`を使ってトランスパイルし、ブラウザはトランスパイル後のJavaScriptコードを読み込むことになります。
 
 ## 新規仕様
@@ -53,13 +53,15 @@ const c = 1; // 再代入不可な値（推奨）
 ```js
 // ES5
 var errorCode = 404;
-var errorMessage = `file not found`;
+var errorMessage = `file not found.`;
 console.log('Error!! Code: ' + errorCode + ', Message: ' + errorMessage);
+// Error!! Code: 404, Message: file not found.
 
 // ES6
 const errorCode = 404;
-const errorMessage = `file not found`;
+const errorMessage = `file not found.`;
 console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
+// Error!! Code: 404, Message: file not found.
 ```
 
 ### Class
