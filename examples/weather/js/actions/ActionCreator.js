@@ -13,6 +13,7 @@ export function updateWeather() {
   return (dispatch) => {
     return fetch(`${WEATHER_API}${API_KEY}`)
       .then(response => response.json())
-      .then(json => dispatch(receiveWeather(json)));
+      .then(json => dispatch(receiveWeather(json)))
+      .catch(error => dispatch({ type: '' }));
   };
 }

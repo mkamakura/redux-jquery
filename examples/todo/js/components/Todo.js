@@ -15,6 +15,10 @@ export default class Todo {
     this.$selector.find('.active-button').on('click', () => this.dispatch(actions.changeTab(TAB.ACTIVE)));
     this.$selector.find('.complete-button').on('click', () => this.dispatch(actions.changeTab(TAB.COMPLETED)));
 
+    this.$todoList.on('click', '.active', (event) => this.dispatch(actions.activeTodo($(event.target).parent().attr('data-todo-id'))));
+    this.$todoList.on('click', '.complete', (event) => this.dispatch(actions.completeTodo($(event.target).parent().attr('data-todo-id'))));
+    this.$todoList.on('click', '.delete', (event) => this.dispatch(actions.deleteTodo($(event.target).parent().attr('data-todo-id'))));
+
     this.init();
   }
 
@@ -31,17 +35,13 @@ export default class Todo {
   renderTodo(todo) {
     const $template = this.$todoTemplate.clone();
     $template.removeClass('todo-template').show();
+    $template.attr('data-todo-id', todo.id);
     $template.find('.todo-text').text(todo.text);
     if (todo.status === TODO_STATUS.COMPLETED) {
       $template.addClass('completed');
       $template.find('.complete').hide();
-      $template.find('.active').on('click', () => this.dispatch(actions.activeTodo(todo.id)));
     }
-    if (todo.status === TODO_STATUS.ACTIVE) {
-      $template.find('.active').hide();
-      $template.find('.complete').on('click', () => this.dispatch(actions.completeTodo(todo.id)));
-    }
-    $template.find('.delete').on('click', () => this.dispatch(actions.deleteTodo(todo.id)));
+    if (todo.status === TODO_STATUS.ACTIVE) $template.find('.active').hide();
     return $template;
   }
 }

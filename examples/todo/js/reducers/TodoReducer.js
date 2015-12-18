@@ -10,22 +10,28 @@ const initialState = [{
 
 export default defineReducer(initialState, {
   [INITIAL_TODO]: (state, action) => {
-    return action.todo.map((todo) => {
+    return action.todos.map((todo) => {
       return {id: todo.id, text: todo.text, status: TODO_STATUS[todo.status]};
     });
   },
-  [ADD_TODO]: (state, action) => {
-    return [
-      {
-        id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
-        text: action.text,
-        status: TODO_STATUS.ACTIVE
-      },
-      ...state
-    ];
-  },
+  [ADD_TODO]: (state, action) => [
+    {
+      id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
+      text: action.text,
+      status: TODO_STATUS.ACTIVE
+    },
+    ...state
+  ],
   [DELETE_TODO]: (state, action) => state.filter((todo) => todo.id !== action.id),
-  [COMPLETE_TODO]: (state, action) => state.map((todo) => todo.id === action.id ? Object.assign({}, todo, {status: TODO_STATUS.COMPLETED}) : todo),
-  [ACTIVE_TODO]: (status, action) => status.map((todo) => todo.id === action.id ? Object.assign({}, todo, {status: TODO_STATUS.ACTIVE}) : todo),
+  [COMPLETE_TODO]: (state, action) => state.map(
+    (todo) => todo.id === action.id ?
+      Object.assign({}, todo, {status: TODO_STATUS.COMPLETED}) :
+      todo
+  ),
+  [ACTIVE_TODO]: (state, action) => state.map(
+    (todo) => todo.id === action.id ?
+      Object.assign({}, todo, {status: TODO_STATUS.ACTIVE}) :
+      todo
+  ),
   [CANCEL]: (state) => state
 });
