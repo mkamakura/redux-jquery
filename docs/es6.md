@@ -97,8 +97,8 @@ function consoleName(name = 'Taro') {
   console.log(`username: ${name}`);
 }
 
-consoleName(); // console out put 'Taro'
-consoleName('Masaya'); // console out put 'Masaya'
+consoleName(); // Taro
+consoleName('Masaya'); // Masaya
 ```
 
 ### Arrow Function
