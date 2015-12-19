@@ -1,7 +1,7 @@
 # ES6 Frist Step
 
 ## はじめに
-`ECMAScript 6(ES6)`は`JavaScript`の新しい標準仕様です。この仕様は2015年6月に確定しました。
+`ECMAScript 6(ES6)`は`ECMAScript`の新しい標準仕様です。この仕様は2015年6月に確定しました。
 `ES5`から6年ぶりのメジャーアップデートのため最初は違和感があるかもしれません。
 しかし、より便利になるアップデートですのでしっかりキャッチアップし積極的に使用していきましょう。
 
@@ -114,8 +114,8 @@ $('.hoge').on('change', function(event) {
 
 // ES6
 $('.hoge').on('change', (event) => {
-  console.log(event));
-}
+  console.log(event);
+)}
 // 中身が式なら`{}`を省略可能で、結果が`return`される
 $('.hoge').on('change', (event) => console.log(event));
 ```
@@ -137,8 +137,8 @@ class StatusCode {
     self = this;
     setTimeout(function() {
       if (this.statusCode === undefined) console.log('`this.statusCode` is `undefined` in function');
-      console.log(self.statusCode, 'OK')
-    }, 1000)
+      console.log(self.statusCode, 'OK');
+    }, 1000);
   }
 }
 
@@ -177,10 +177,21 @@ const list = [1, 2, 3];
 console.log(...list); // 1 2 3
 
 // 先頭に要素を追加する
-const list = [1, 2, 3];
 const newList = [0, ...list];
 console.log(newList); // [0, 1, 2, 3]
 ```
+
+### Object.assign()
+
+## ES5で積極的に使ってほしい機能
+
+### Array.prototype.forEach()
+
+### Array.prototype.map()
+
+### Array.prototype.filter()
+
+### Array.prototype.reduce()
 
 ## おわりに
 この資料で紹介した機能はES6の仕様でもごく一部です。

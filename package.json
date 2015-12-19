@@ -1,6 +1,6 @@
 {
   "name": "redux-jquery",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,8 @@
     "babelify": "6.3.0",
     "eslint": "1.10.3",
     "eslint-plugin-babel": "3.0.0",
+    "gitbook": "2.6.6",
+    "gitbook-cli": "1.0.1",
     "gitbook-plugin-include-codeblock": "1.5.0",
     "globify": "1.2.1",
     "npm-run-all": "1.4.0",
