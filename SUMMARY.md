@@ -1,8 +1,8 @@
 ## Table of Contents
 
 * [Read Me](/README.md)
-* [Redux overview](docs/redux.md)
-* [ES6 first step](docs/es6.md)
+* [Redux Overview](docs/redux.md)
+* [ES6 First Step](docs/es6.md)
 * [Examples](docs/examples/README.md)
  * [Counter](docs/examples/counter.md)
  * [Greeting](docs/examples/greeting.md)
