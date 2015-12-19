@@ -1,5 +1,5 @@
+import { createAction } from 'redux-actions';
+
 export const UPDATE_NAME = 'UPDATE_NAME';
 
-export function updateName(name) {
-  return { type: UPDATE_NAME, name };
-}
+export const updateName = createAction(UPDATE_NAME, (name) => name);
