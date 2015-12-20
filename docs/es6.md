@@ -255,11 +255,12 @@ console.log(max); // 5
 
 ## おわりに
 この資料で紹介した機能はES6の仕様でもごく一部です。さらに勉強したい方のために参考資料を残しておきます。
-またES5で便利な関数も紹介しました。`for`,`if`,`switch`等を使わなくても書けることが多いので、これらの命令を使いたくなったらES5の機能で書けないか考えるようにしましょう。
+またES5で便利な関数も紹介しました。`for`,`if`,`switch`等を使わなくても書けることが多いので、ES5の機能で書けないか考えるようにしましょう。
 
 ## 参考資料
 - https://babeljs.io/
 - https://babeljs.io/docs/learn-es2015/
 - http://sssslide.com/www.slideshare.net/teppeis/es6-in-practice
 - https://kangax.github.io/compat-table/es6/
+- https://developer.mozilla.org/ja/docs/Web/JavaScript
 - http://azu.github.io/promises-book/
