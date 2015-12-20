@@ -198,10 +198,19 @@ console.log(newTodo);
 ## ES5で積極的に使ってほしい機能
 
 ### Array.prototype.forEach()
-
+与えられた関数を、配列の各要素に対して一度ずつ実行します。
 ```js
+// `Array.prototype.forEach()`
 const data = [1, 2, 3, 4, 5];
 data.forEach((val) => console.log(val));
+```
+
+for文でも書けますが`let`でループ変数が必要であったり、階層が深くなると可読性が下がるので使用しないようにしましょう。
+```js
+// for文の場合
+for (let i=0; i<data.length; i++) {
+  console.log(data.length);
+}
 ```
 
 ### Array.prototype.map()
