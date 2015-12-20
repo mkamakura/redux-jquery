@@ -242,12 +242,20 @@ console.log(filterSquare); // [1, 4, 9]
 ```
 
 ### Array.prototype.reduce()
-```
+隣り合う 2 つの配列要素に対して（左から右へ）同時に関数を適用し、単一の値にします。
+```js
+const data = [1, 2, 3, 4, 5];
+
+const sum = data.reduce((pre, current) => pre + current);
+console.log(sum); // 15
+
+const max = data.reduce((pre, current) => Math.max(pre, current));
+console.log(max); // 5
 ```
 
 ## おわりに
-この資料で紹介した機能はES6の仕様でもごく一部です。
-さらに勉強したい方のために参考資料を残しておきます。
+この資料で紹介した機能はES6の仕様でもごく一部です。さらに勉強したい方のために参考資料を残しておきます。
+またES5で便利な関数も紹介しました。`for`,`if`,`switch`等を使わなくても書けることが多いので、これらの命令を使いたくなったらES5の機能で書けないか考えるようにしましょう。
 
 ## 参考資料
 - https://babeljs.io/
