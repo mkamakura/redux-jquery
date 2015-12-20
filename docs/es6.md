@@ -242,6 +242,8 @@ console.log(filterSquare); // [1, 4, 9]
 ```
 
 ### Array.prototype.reduce()
+```
+```
 
 ## おわりに
 この資料で紹介した機能はES6の仕様でもごく一部です。
