@@ -191,7 +191,7 @@ const todo = {
 
 const newTodo = Object.assign({}, todo, {status: 'progress'});
 console.log(newTodo);
-// { id: 1, text: 'catch up es6', status: 'progress' }
+// { "id": 1, "text": "catch up es6", "status": "progress" }
 ```
 
 ## ES5で積極的に使ってほしい機能
