@@ -208,8 +208,13 @@ data.forEach((val) => console.log(val));
 for文でも書けますが`let`でループ変数が必要であったり、階層が深くなると可読性が下がるので使用しないようにしましょう。
 ```js
 // for文の場合
+const data = [1, 2, 3, 4, 5];
 for (let i=0; i<data.length; i++) {
-  console.log(data.length);
+  for (let j=0; j<data.length; j++) {
+    for(let k=0; k<data.length: k++) {
+      console.log(data.length);
+    }
+  }
 }
 ```
 
