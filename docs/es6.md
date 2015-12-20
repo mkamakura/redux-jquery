@@ -181,7 +181,8 @@ const newList = [0, ...list];
 console.log(newList); // [0, 1, 2, 3]
 ```
 
-### Object.assign()
+### Object.assign(target, ...sources)
+1つ以上の`source`オブジェクトの保有する全てのプロパティを`target`にコピーします。戻り値は`target`オブジェクトになります。`immutable`な値を設計をする場合に良く利用
 ```
 const todo = {
   id: 1,
