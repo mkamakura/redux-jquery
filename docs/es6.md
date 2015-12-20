@@ -182,6 +182,17 @@ console.log(newList); // [0, 1, 2, 3]
 ```
 
 ### Object.assign()
+```
+const todo = {
+  id: 1,
+  text: 'catch up es6',
+  status: 'pedding'
+};
+
+const newTodo = Object.assign({}, todo, {status: 'progress'});
+console.log(newTodo);
+// { id: 1, text: 'catch up es6', status: 'progress' }
+```
 
 ## ES5で積極的に使ってほしい機能
 
