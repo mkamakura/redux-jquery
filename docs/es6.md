@@ -237,7 +237,7 @@ console.log(square); // [1,4,9,16,25]
 const data = [1, 2, 3, 4, 5];
 // 要素が4未満の場合のみ2乗した結果を返す
 const filterSquare = data.filter((val) => val < 4)
-                        .map((val) => val * val);
+                         .map((val) => val * val);
 console.log(filterSquare); // [1, 4, 9]
 ```
 
