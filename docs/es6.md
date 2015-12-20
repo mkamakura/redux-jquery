@@ -194,7 +194,7 @@ console.log(newTodo);
 // { "id": 1, "text": "catch up es6", "status": "progress" }
 ```
 
-## ES5で積極的に使ってほしい機能
+## おまけ:ES5で積極的に使ってほしい機能
 
 ### Array.prototype.forEach()
 与えられた関数を、配列の各要素に対して一度ずつ実行します。
