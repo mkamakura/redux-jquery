@@ -183,7 +183,7 @@ console.log(newList); // [0, 1, 2, 3]
 
 ### Object.assign(target, ...sources)
 1つ以上の`source`オブジェクトの保有する全てのプロパティを`target`にコピーします。戻り値は`target`オブジェクトになります。`immutable`な値を設計をする場合に良く利用されます。
-```
+```js
 const todo = {
   id: 1,
   text: 'catch up es6',
@@ -199,7 +199,7 @@ console.log(newTodo);
 
 ### Array.prototype.forEach()
 
-```
+```js
 const data = [1, 2, 3, 4, 5];
 data.forEach((val) => console.log(val));
 ```
