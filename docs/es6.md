@@ -199,7 +199,6 @@ console.log(newTodo);
 ### Array.prototype.forEach()
 与えられた関数を、配列の各要素に対して一度ずつ実行します。
 ```js
-// `Array.prototype.forEach()`
 const data = [1, 2, 3, 4, 5];
 data.forEach((val) => console.log(val));
 ```
