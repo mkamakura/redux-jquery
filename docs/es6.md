@@ -232,8 +232,12 @@ console.log(twice); // [1,4,9,16,25]
 ```
 
 ### Array.prototype.filter()
-```
-
+引数として与えられたテスト関数を各配列要素に対して実行し、それに合格したすべての配列要素からなる新しい配列を生成します。
+```js
+const data = [1, 2, 3, 4, 5];
+const filterTwice = data.filter((val) => val < 4)
+                        .map((val) => val * val);
+console.log(filterTwice); // [1, 4, 9]
 ```
 
 ### Array.prototype.reduce()
