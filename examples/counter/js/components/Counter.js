@@ -1,9 +1,9 @@
 import * as actions from '../actions/ActionCreator';
-import connect from '../../../utils/connect';
+import BaseComponent from '../../../utils/BaseComponent';
 
-export default class Counter {
+export default class Counter extends BaseComponent {
   constructor(selector, store) {
-    connect(this, selector, store, 'result');
+    super(selector, store, 'result');
 
     this.$result = this.$selector.find('.js-result');
     this.$selector.find('.js-increment').on('click', () => this.dispatch(actions.increment()));

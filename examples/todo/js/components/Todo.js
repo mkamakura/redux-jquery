@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import { TODO_STATUS, TAB } from '../contents/contents';
 import * as actions from '../actions/ActionCreator';
-import connect from '../../../utils/connect';
+import BaseComponent from '../../../utils/BaseComponent';
 
-export default class Todo {
+export default class Todo extends BaseComponent {
   constructor(selector, store) {
-    connect(this, selector, store);
+    super(selector, store, 'todo', 'tab');
 
     this.$todoList = this.$selector.find('.todo-list');
     this.$todoTemplate = $('.todo-template');

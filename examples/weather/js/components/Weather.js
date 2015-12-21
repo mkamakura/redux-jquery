@@ -1,9 +1,9 @@
 import * as actions from '../actions/ActionCreator';
-import connect from '../../../utils/connect';
+import BaseComponent from '../../../utils/BaseComponent';
 
-export default class Weather {
+export default class Weather extends BaseComponent {
   constructor(selector, store) {
-    connect(this, selector, store, 'weather');
+    super(selector, store, 'weather');
 
     this.$temp = this.$selector.find('.js-temp');
     this.$tempMax = this.$selector.find('.js-temp-max');

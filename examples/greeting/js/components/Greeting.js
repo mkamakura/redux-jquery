@@ -1,9 +1,9 @@
 import * as actions from '../actions/ActionCreator';
-import connect from '../../../utils/connect';
+import BaseComponent from '../../../utils/BaseComponent';
 
-export default class Greeting {
+export default class Greeting extends BaseComponent {
   constructor(selector, store) {
-    connect(this, selector, store, 'name');
+    super(selector, store, 'name');
 
     this.$greeting = this.$selector.find('.js-greeting');
     this.$inputName = this.$selector.find('input[name=name]');
