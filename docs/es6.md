@@ -232,7 +232,7 @@ for文でも書けますがループ変数が必要であったり、階層が�
 ```js
 const data = [1, 2, 3, 4, 5];
 const square = data.map((val) => val * val);
-console.log(square); // [1,4,9,16,25]
+console.log(square); // [1, 4, 9, 16, 25]
 ```
 
 ### Array.prototype.filter()
