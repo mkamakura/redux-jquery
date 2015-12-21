@@ -153,7 +153,7 @@ const statusCode = new StatusCode(200);
 var obj = { "name": "Masaya Kamakura" };
 
 // ES6
-// keyとvalueが同じ名前であえば省略可能
+// key名とvalueの変数名が同じであえば省略可能
 function getNameObject(name) {
   return { name };
 }
