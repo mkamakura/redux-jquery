@@ -190,9 +190,9 @@ console.log(newList); // [0, 1, 2, 3]
 
 ```js
 // a.js
-import { hoge1, hoge2 } from "b"; 
-import foo from "b";
-import * as fuga from "b";
+import { hoge1, hoge2 } from "b"; // hoge1, hoge2を読み込む
+import foo from "b"; // `{}`をつけないとexport defaultされたモジュールを読み込む
+import * as fuga from "b"; // すべてのモジュールを読み込み
 ```
 
 ```js
