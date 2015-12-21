@@ -109,7 +109,7 @@ functionを`=>`に置換できます。
 // ES5
 $('.hoge').on('change', function(event) {
   console.log(event);
-}
+});
 
 // ES6
 $('.hoge').on('change', (event) => {
