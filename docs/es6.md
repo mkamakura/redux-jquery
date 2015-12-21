@@ -180,6 +180,23 @@ const newList = [0, ...list];
 console.log(newList); // [0, 1, 2, 3]
 ```
 
+### Import/Export
+- `import`: 外部モジュールを読み込む
+- `export`: 外部モジュールで利用できるようにする
+
+```js
+// a.js
+import { hoge } from "b"; 
+import foo from "b";
+```
+
+```js
+// b.js
+export function hoge() {};
+export default function foo() {};
+```
+`a.js`では`b.js`から`{ hoge }`と`foo`モージュルを`import`している。`{}`は`export`時に`default`がない場合に必要となる。
+
 ### Object.assign(target, ...sources)
 1つ以上の`source`オブジェクトの保有する全てのプロパティを`target`にコピーします。戻り値は`target`オブジェクトになります。`immutable`な値を設計をする場合に良く利用されます。
 ```js
