@@ -159,7 +159,7 @@ function getNameObject(name) {
 }
 console.log(getNameObject('Masaya Kamakura')); // {"name":"Masaya Kamakura"}
 
-// keyを動的に宣言可能
+// key名を動的に宣言可能
 function getNameObject(name) {
   const nameKey = 'fullName';
   return { [nameKey]: name }; // keyに変数を使用
