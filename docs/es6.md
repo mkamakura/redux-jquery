@@ -114,7 +114,7 @@ $('.hoge').on('change', function(event) {
 // ES6
 $('.hoge').on('change', (event) => {
   console.log(event);
-)}
+});
 // 中身が式なら`{}`を省略可能であるが、関数の結果が`return`される
 $('.hoge').on('change', (event) => console.log(event));
 ```
