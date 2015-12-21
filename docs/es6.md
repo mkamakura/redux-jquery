@@ -190,14 +190,15 @@ console.log(newList); // [0, 1, 2, 3]
 
 ```js
 // a.js
-import { hoge } from "b"; 
+import { hoge1, hoge2 } from "b"; 
 import foo from "b";
 import * as fuga from "b";
 ```
 
 ```js
 // b.js
-export function hoge() {};
+export function hoge1() {};
+export function hoge2() {};
 export default function foo() {};
 ```
 `a.js`では`b.js`から`{ hoge }`と`foo`モージュルを`import`している。`{}`は`export`時に`default`がない場合に必要となる。
