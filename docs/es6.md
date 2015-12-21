@@ -225,21 +225,6 @@ data.forEach((val) => console.log(val));
 ```
 
 for文でも書けますがループ変数が必要であったり、階層が深くなると可読性が下がるので使用しないようにしましょう。
-```js
-const data = [1, 2, 3, 4, 5];
-
-// for文の場合
-for (let i=0; i<data.length; i++) {
-  for (let j=0; j<data.length; j++) {
-    for(let k=0; k<data.length; k++) {
-      console.log(i, j, k);
-    }
-  }
-}
-
-// forEachの場合
-data.forEach((i) => data.forEach((j) => data.forEach((k) => console.log(i, j, k))));
-```
 
 ### Array.prototype.map()
 与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。
