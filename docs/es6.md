@@ -149,6 +149,10 @@ const statusCode = new StatusCode(200);
 ### Enhanced Object Literals
 オブジェクトリテラルが拡張されました。
 ```js
+// ES5
+var obj = { "name": "Masaya Kamakura" };
+
+// ES6
 // keyとvalueが同じ名前であえば省略可能
 function getNameObject(name) {
   return { name };
