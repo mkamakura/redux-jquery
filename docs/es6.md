@@ -192,6 +192,7 @@ console.log(newList); // [0, 1, 2, 3]
 // a.js
 import { hoge } from "b"; 
 import foo from "b";
+import * as fuga from "b";
 ```
 
 ```js
