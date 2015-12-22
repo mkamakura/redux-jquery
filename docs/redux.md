@@ -95,4 +95,4 @@ const store = createStore(todoApp);
 ## データフロー
 WIP
 
-# 参考資料
+## 参考資料
