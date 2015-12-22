@@ -9,9 +9,6 @@
 ## Reduxの全体像
 ![](./img/redux_arch.png)
 
-**データフロー**
-
-
 ## 3原則
 http://rackt.org/redux/docs/introduction/ThreePrinciples.html
 
