@@ -206,7 +206,7 @@ export function hoge2() {};
 、なるべく使わないようにしましょう。（トランスパイル後のファイルサイズが増えてしまうためです。）
 
 ### Object.assign(target, ...sources)
-1つ以上の`source`オブジェクトの保有する全てのプロパティを`target`にコピーします。戻り値は`target`オブジェクトになります。`immutable`な値を設計をする場合に良く利用されます。
+1つ以上の`source`オブジェクトの保有する全てのプロパティを`target`にコピーします。戻り値は`target`オブジェクトになります。
 ```js
 const todo = {
   id: 1,
