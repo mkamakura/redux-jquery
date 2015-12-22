@@ -8,6 +8,7 @@
 
 ## 全体像
 
+
 ## 3原則
 http://rackt.org/redux/docs/introduction/ThreePrinciples.html
 
@@ -87,8 +88,7 @@ const store = createStore(todoApp);
 
 ### Middleware
 - `dispatch`する前後にそれぞれ任意の処理を追加することができる仕組み
-- `dispatch`前後の`state`の状態をログ出力する
-- 特定の条件を満たす場合に`dispatch`しないなど
+- `dispatch`前後の`state`の状態をログ出力する等
 - npmに有志によって実装されたMiddlewareが上がっているので適宜使用する https://www.npmjs.com/search?q=redux%20middleware
 
 ## データフロー
