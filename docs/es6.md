@@ -261,7 +261,7 @@ const max = data.reduce((pre, current) => Math.max(pre, current));
 console.log(max); // 5
 ```
 
-`sumの例`
+**sumの例**
 
 ||pre|current|return|
 |-|-|-|
@@ -271,7 +271,7 @@ console.log(max); // 5
 |4th|10|5|15|
 結果: 15
 
-`maxの例`
+**maxの例**
 
 ||pre|current|return|
 |-|-|-|
