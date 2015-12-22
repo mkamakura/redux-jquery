@@ -1,13 +1,11 @@
 # Reduxの概要
 
-- [公式サイト](http://rackt.org/redux/index.html)
+- [Redux公式サイト](http://rackt.org/redux/index.html)
+- [公式ドキュメント](http://redux.js.org/index.html)
 - 初歩的な概念しか記載していませんが、以下の用語やデータフローは最低限理解しておきましょう。
 
 ## はじめに
-**背景**
 
-
-**Flux**
 
 ## 3原則
 http://rackt.org/redux/docs/introduction/ThreePrinciples.html
