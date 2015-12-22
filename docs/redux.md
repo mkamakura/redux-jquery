@@ -6,6 +6,8 @@
 ## はじめに
 初歩的な概念しか記載していませんが、以下の用語やデータフローは最低限理解しておきましょう。さらに理解を深めたい場合は公式ドキュメントを参照してください。
 
+## 全体像
+
 ## 3原則
 http://rackt.org/redux/docs/introduction/ThreePrinciples.html
 
