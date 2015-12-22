@@ -9,6 +9,9 @@
 ## 全体像
 ![](./img/redux_arch.png)
 
+**データフロー**
+- `User`の入力があったら`View Component`から`Action`で
+
 ## 3原則
 http://rackt.org/redux/docs/introduction/ThreePrinciples.html
 
@@ -51,7 +54,7 @@ function addTodo(text) {
 }
 ```
 
-`dispatch`するときは`creator`で作成した`action`を渡します。
+`dispatch`するときは`creator`で作成した`action()`を渡します。
 
 ```
 dispatch(addTodo(text));
