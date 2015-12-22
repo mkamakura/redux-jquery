@@ -201,7 +201,9 @@ export default function foo() {};
 export function hoge1() {};
 export function hoge2() {};
 ```
-`a.js`では`b.js`から`{ hoge }`と`foo`モージュルを`import`している。`{}`は`export`時に`default`がない場合に必要となる。
+
+`{}`は`export`時に`default`がない場合に必要となる。`* as fuge`すべてのモジュールを読み込んでくれるので便利なのですが
+、なるべく使わないようにしましょう。（トランスパイル後のファイルサイズが増えてしまうためです。）
 
 ### Object.assign(target, ...sources)
 1つ以上の`source`オブジェクトの保有する全てのプロパティを`target`にコピーします。戻り値は`target`オブジェクトになります。`immutable`な値を設計をする場合に良く利用されます。
