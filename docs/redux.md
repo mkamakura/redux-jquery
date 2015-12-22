@@ -90,8 +90,3 @@ const store = createStore(todoApp);
 - `dispatch`する前後にそれぞれ任意の処理を追加することができる仕組み
 - `dispatch`前後の`state`の状態をログ出力する等
 - npmに有志によって実装されたMiddlewareが上がっているので適宜使用する https://www.npmjs.com/search?q=redux%20middleware
-
-## データフロー
-WIP
-
-## 参考資料
