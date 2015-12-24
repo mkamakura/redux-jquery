@@ -20,4 +20,32 @@ const store = createStoreWithMiddleware(RootReducer);
 
 ### Usage
 
+*Action*
+```js
+import { createAction } from 'redux-actions';
+
+// ActionType
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+
+// Action Creator
+export const increment = createAction(INCREMENT);
+export const decrement = createAction(DECREMENT);
+```
+
+*Reducer*
+```js
+import { handleActions } from 'redux-actions';
+import { INCREMENT, DECREMENT } from '../actions/ActionCreator';
+
+const initialState = 0;
+
+export const CounterReducer = handleActions({
+  [INCREMENT]: (state) => state + 1,
+  [DECREMENT]: (state) => state - 1
+}, initialState);
+```
+
 ## redux-thunk
+- https://github.com/gaearon/redux-thunk
+- 
