@@ -16,9 +16,7 @@
 [import](../../examples/utils/BaseComponent.js)
 
 ```js
-this.$selector = $(selector);
-this.state = store.getState();
-this.dispatch = store.dispatch;
+constructor(selector, store, ...stateNames)
 ```
 
 ### constructor()
