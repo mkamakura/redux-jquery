@@ -7,6 +7,6 @@ const initialState = {
 };
 
 export const WeatherReducer = handleActions({
-  [UPDATE_WEATHER]: (state, action) => Object.assign({}, state, { data: action.payload , message: '' }),
+  [UPDATE_WEATHER]: (state, action) => Object.assign({}, state, { data: action.payload, message: '' }),
   [FETCH_EXCEPTION]: (state, action) => Object.assign({}, state, { message: action.payload })
 }, initialState);
