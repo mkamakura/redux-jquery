@@ -43,7 +43,6 @@ constructor(selector, store, ...stateNames)
 
 ## Action
 **役割**
-- `Component`の`constructor`でセットされた`store.dispatch()`によって実行される
 - `Reducer`に`ActionType`を渡している
 
 *ActionType*
