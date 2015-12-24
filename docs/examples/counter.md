@@ -11,6 +11,7 @@
 ## Component
 
 ### BaseComponent
+- すべての`Component`は`BaseComponent`を継承する前提でつくられます。
 
 ### constructor()
 **役割**
