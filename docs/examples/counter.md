@@ -13,6 +13,8 @@
 ### BaseComponent
 - すべての`Component`は`BaseComponent`を継承する前提でつくられます。
 
+[import](../../examples/utils/BaseComponent.js)
+
 ### constructor()
 **役割**
 - `store.subscribe()`の定義
