@@ -57,7 +57,7 @@ constructor(selector, store, ...stateNames)
 
 [import:4-9](../../examples/counter/js/reducers/CounterReducer.js)
 
-`state`の値が変更されると`Component`の`constructor`で定義した`store.subscribe()`が実行される仕組みです。
+`state`の値が変更されると`BaseComponent`の`constructor`で定義した`store.subscribe()`が実行される仕組みです。
 
 ## おわりに
 今回のサンプルではデータフローをわかりやすくするために必要最低限の機能しかもっていませんでした。
