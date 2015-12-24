@@ -32,8 +32,6 @@ constructor(selector, store, ...stateNames)
 
 [import:5-18](../../examples/counter/js/components/Counter.js)
 
-`Component`で使用する`state`に変更があるか監視し変更があった時のみ`render()`を実行する。
-
 イベントハンドラのセットでは`click`イベントが発生したら`store.dispatch()`を実行するようにしている。
 
 ### render()
