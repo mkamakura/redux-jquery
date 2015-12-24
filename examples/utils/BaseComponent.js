@@ -30,6 +30,4 @@ export default class BaseComponent {
     }
     return false;
   }
-
-  render() {}
 }
