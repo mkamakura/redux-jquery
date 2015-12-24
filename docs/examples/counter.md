@@ -46,7 +46,7 @@ constructor(selector, store, ...stateNames)
 - `Reducer`に`ActionType`を渡している
 
 *ActionType*
-[import:1-2](../../examples/counter/js/actions/ActionCreator.js)
+[import:3-4](../../examples/counter/js/actions/ActionCreator.js)
 
 *ActionCreator*
 [import:4-10](../../examples/counter/js/actions/ActionCreator.js)
