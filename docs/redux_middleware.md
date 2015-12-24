@@ -81,6 +81,7 @@ const fetchException = createAction(FETCH_EXCEPTION, (message) => message);
 
 export function updateWeather() {
   return (dispatch) => {
+    // fetch後にdispatchを実行
     return fetch(`${WEATHER_API}${API_KEY}`)
       .then(response => response.json())
       .then(json => dispatch(receiveWeather(json)))
