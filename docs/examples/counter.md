@@ -32,6 +32,8 @@ constructor(selector, store, ...stateNames)
 
 [import:8-10](../../examples/counter/js/components/Counter.js)
 
+`super(selector, store, 'result')`: `state`の`result`に変更があったら`render()`が実行されるように定義する。
+
 イベントハンドラのセットでは`click`イベントが発生したら`store.dispatch()`を実行するようにしている。
 
 ### render()
