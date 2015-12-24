@@ -38,7 +38,7 @@ constructor(selector, store, ...stateNames)
 **役割**
 - `state`の変更に伴う画面の再描画を行う
 
-[import:20-22](../../examples/counter/js/components/Counter.js)
+[import:13-15](../../examples/counter/js/components/Counter.js)
 
 ## Action
 **役割**
