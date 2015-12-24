@@ -11,7 +11,7 @@
 ## Component
 
 ### BaseComponent
-- すべての`Component`は`BaseComponent`を継承する前提でつくられます。
+- すべての`Component`は`BaseComponent`を継承する前提でつくられます
 
 [import](../../examples/utils/BaseComponent.js)
 
