@@ -27,7 +27,6 @@ constructor(selector, store, ...stateNames)
 
 ### constructor()
 **役割**
-- `store.subscribe()`の定義
 - イベントハンドラのセット
 - `render()`で使用するセレクタがある場合は定義しておく
 
