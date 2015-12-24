@@ -48,4 +48,18 @@ export const CounterReducer = handleActions({
 
 ## redux-thunk
 - https://github.com/gaearon/redux-thunk
-- 
+- `Action`で遅延評価して`dispatch`可能にする
+- `Action`で非同期処理を実装するときに利用する
+
+```js
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers/index';
+
+// create a store that has redux-thunk middleware enabled
+const createStoreWithMiddleware = applyMiddleware(
+  thunk
+)(createStore);
+
+const store = createStoreWithMiddleware(rootReducer);
+```
