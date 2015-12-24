@@ -19,7 +19,9 @@
 ```js
 constructor(selector, store, ...stateNames)
 ```
-- `selector`: `Component`の
+- `selector`: `Component`のDOMのクラス名またはID
+- `store`: `rootReducer`
+- `...stateNames`: 監視する`state名`
 
 ### constructor()
 **役割**
