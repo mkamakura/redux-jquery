@@ -4,7 +4,6 @@ import is from 'predicates';
 export default class BaseComponent {
   constructor(selector, store, ...stateNames) {
     this.$selector = $(selector);
-    console.log(stateNames);
     this.state = store.getState();
     this.dispatch = store.dispatch;
     store.subscribe(() => {
