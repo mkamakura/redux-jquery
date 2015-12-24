@@ -10,6 +10,8 @@
 
 ## Component
 
+### BaseComponent
+
 ### constructor()
 **役割**
 - `store.subscribe()`の定義
