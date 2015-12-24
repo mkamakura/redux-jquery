@@ -49,7 +49,7 @@ constructor(selector, store, ...stateNames)
 [import:3-4](../../examples/counter/js/actions/ActionCreator.js)
 
 *ActionCreator*
-[import:4-10](../../examples/counter/js/actions/ActionCreator.js)
+[import:6-7](../../examples/counter/js/actions/ActionCreator.js)
 
 ### Reducer
 **役割**
