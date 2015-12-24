@@ -58,9 +58,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/index';
 
 // create a store that has redux-thunk middleware enabled
-const createStoreWithMiddleware = applyMiddleware(
-  thunk
-)(createStore);
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 const store = createStoreWithMiddleware(rootReducer);
 ```
