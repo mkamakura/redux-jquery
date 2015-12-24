@@ -2,6 +2,7 @@
 
 * [Read Me](README.md)
 * [Redux Overview](docs/redux.md)
+   * Redux Middleware
 * [ES6 First Step](docs/es6.md)
 * [Examples](docs/examples/README.md)
    * [Counter](docs/examples/counter.md)
