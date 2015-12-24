@@ -15,9 +15,11 @@
 
 [import](../../examples/utils/BaseComponent.js)
 
+`constructor`
 ```js
 constructor(selector, store, ...stateNames)
 ```
+- `selector`: `Component`の
 
 ### constructor()
 **役割**
