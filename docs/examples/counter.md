@@ -21,7 +21,9 @@ constructor(selector, store, ...stateNames)
 ```
 - `selector`: `Component`のDOMのクラス名またはID
 - `store`: `rootReducer`
-- `...stateNames`: 監視する`state`名
+- `...stateNames`: 監視する`state`（文字列）
+
+- `...stateNames`で指定した`state`に変更があったら`render`を実行する機能を提供する
 
 ### constructor()
 **役割**
