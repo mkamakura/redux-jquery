@@ -1,8 +1,8 @@
 # Redux Middleware
 
 ## redux-logger
-- コンソールログに前の`state`と次の`state`を出力する
 - https://github.com/fcomb/redux-logger
+- コンソールログに前の`state`と次の`state`を出力する
 
 ### Usage
 ```js
@@ -15,5 +15,9 @@ const store = createStoreWithMiddleware(RootReducer);
 ```
 
 ## redux-actions
+- https://github.com/acdlite/redux-actions
+- `Action Creator`をラップして使いやすくしてくれている
+
+### Usage
 
 ## redux-thunk
