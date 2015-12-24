@@ -30,7 +30,7 @@ constructor(selector, store, ...stateNames)
 - イベントハンドラのセット
 - `render()`で使用するセレクタがある場合は定義しておく
 
-[import:5-18](../../examples/counter/js/components/Counter.js)
+[import:8-10](../../examples/counter/js/components/Counter.js)
 
 イベントハンドラのセットでは`click`イベントが発生したら`store.dispatch()`を実行するようにしている。
 
