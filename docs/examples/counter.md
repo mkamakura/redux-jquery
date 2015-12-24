@@ -16,7 +16,7 @@
 [import](../../examples/utils/BaseComponent.js)
 
 ```js
-constructor(selector, store, ...stateNames)
+constructor(selector, store, ...stateNames) {}
 ```
 
 ### constructor()
