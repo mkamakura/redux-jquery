@@ -15,6 +15,12 @@
 
 [import](../../examples/utils/BaseComponent.js)
 
+```js
+this.$selector = $(selector);
+this.state = store.getState();
+this.dispatch = store.dispatch;
+```
+
 ### constructor()
 **役割**
 - `store.subscribe()`の定義
