@@ -23,7 +23,7 @@ constructor(selector, store, ...stateNames)
 - `store`: `rootReducer`
 - `...stateNames`: 監視する`state`（文字列）
 
-- `...stateNames`で指定した`state`に変更があったら子クラスで実装`render`を実行する機能を提供する
+- `...stateNames`で指定した`state`に変更があったら子クラスで実装した`render`を実行する機能を提供します
 
 ### constructor()
 **役割**
