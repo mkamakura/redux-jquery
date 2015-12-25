@@ -1,0 +1,26 @@
+.completed {
+  color: darkgray;
+  text-decoration: line-through;
+}
+
+.delete {
+  float: right;
+  font-size: small;
+  color: grey;
+  cursor: pointer;
+  margin-right: 7px;
+}
+
+.complete {
+  float: right;
+  font-size: small;
+  cursor: pointer;
+  color: deepskyblue;
+}
+
+.active {
+  float: right;
+  font-size: small;
+  cursor: pointer;
+  color: deepskyblue;
+}
