@@ -7,3 +7,5 @@ Reduxで非同期処理を扱う場合は`redux-thunk`というミドルウェ�
 ## Action
 
 [import](../../examples/weather/js/actions/ActionCreator.js)
+
+`updateWeather()`で非同期を行い、結果によって正常系`action`と異常系`action`を`dispatch`している。
