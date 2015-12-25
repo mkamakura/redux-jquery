@@ -8,6 +8,6 @@
    * [Counter](docs/examples/counter.md)
    * [Greeting](docs/examples/greeting.md)
    * [Weather](docs/examples/weather.md)
-* [Tutorial](tutorial.md)
+* [Exercise](exercise l.md)
    * [TODO](todo.md)
 
