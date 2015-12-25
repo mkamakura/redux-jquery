@@ -32,8 +32,8 @@ constructor(selector, store, ...stateNames)
 
 ```js
 this.$result = this.$selector.find('.js-result');
-    this.$selector.find('.js-increment').on('click', () => this.dispatch(actions.increment()));
-    this.$selector.find('.js-decrement').on('click', () => this.dispatch(actions.decrement()));
+this.$selector.find('.js-increment').on('click', () => this.dispatch(actions.increment()));
+this.$selector.find('.js-decrement').on('click', () => this.dispatch(actions.decrement()));
 ```
 
 `super(selector, store, 'result');`は、 `state`の`result`に変更があったら`render()`を実行するように定義している。
