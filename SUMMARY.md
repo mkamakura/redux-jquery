@@ -9,5 +9,5 @@
    * [Greeting](docs/examples/greeting.md)
    * [Weather](docs/examples/weather.md)
 * Exercise
-   * [TODO](todo.md)
+   * [TODO](docs/todo.md)
 
