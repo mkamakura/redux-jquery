@@ -45,7 +45,7 @@ this.$selector.find('.js-decrement').on('click', () => this.dispatch(actions.dec
 
 ```
 render() {
-    this.$result.text(this.state.result);
+  this.$result.text(this.state.result);
 }
 ```
 
