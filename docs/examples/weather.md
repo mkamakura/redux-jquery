@@ -5,3 +5,4 @@
 
 ## Action
 
+[import:10-20](../../examples/weather/js/actions/ActionCreator.js)
