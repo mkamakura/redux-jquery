@@ -16,7 +16,7 @@ const store = createStoreWithMiddleware(RootReducer);
 
 ## redux-actions
 - https://github.com/acdlite/redux-actions
-- `Action Creator`をラップして使いやすくしてくれている
+- `Action Creator`をラップし使いやすくしてくれている
 
 ### Usage
 
