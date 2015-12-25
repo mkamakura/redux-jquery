@@ -26,7 +26,7 @@ constructor(selector, store, ...stateNames)
 - `...stateNames`で指定した`state`に変更があったら子クラスで実装した`render()`を実行する機能を提供します
 
 ### constructor()
-*役割*
+**役割**
 - イベントハンドラのセット
 - `render()`で使用するセレクタがある場合は定義しておく
 
@@ -40,7 +40,7 @@ this.$selector.find('.js-decrement').on('click', () => this.dispatch(actions.dec
 イベントハンドラのセットでは`click`イベントが発生したら`store.dispatch()`を実行するようにしている。
 
 ### render()
-*役割*
+**役割**
 - `state`の変更に伴う画面の再描画を行う
 
 ```
@@ -50,7 +50,7 @@ render() {
 ```
 
 ## Action
-*役割*
+**役割**
 - `Reducer`に`ActionType`を渡している
 
 *ActionType*
@@ -60,7 +60,7 @@ render() {
 [import:6-7](../../examples/counter/js/actions/ActionCreator.js)
 
 ### Reducer
-*役割*
+**役割**
 - `Action`から受け取った`ActionType`によって`state`を新規に返す
 
 [import:4-9](../../examples/counter/js/reducers/CounterReducer.js)
