@@ -18,3 +18,5 @@
 ## Reducer
 
 [import:6-8](../../examples/greeting/js/reducers/GreetingReducer.js)
+
+`ActionCreator`から受け取った値は`action.payload`オブジェクトにある。
