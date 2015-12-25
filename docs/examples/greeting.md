@@ -13,7 +13,11 @@ this.$selector.find('.submit').on('click', () => this.dispatch(actions.updateNam
 
 ## Action
 
-[import:9-10](../../examples/greeting/js/actions/ActionCreator.js)
+```js
+export const UPDATE_NAME = 'UPDATE_NAME';
+
+export const updateName = createAction(UPDATE_NAME, (name) => name);
+```
 `createAction`で`Reducer`に`name`を渡す。
 
 ## Reducer
