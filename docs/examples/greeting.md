@@ -13,7 +13,8 @@
 ## Action
 
 [import:9-10](../../examples/greeting/js/actions/ActionCreator.js)
+`createAction`で`Reducer`に`name`を渡す。
 
 ## Reducer
 
-## おわりに
+[import:6-8](../../examples/greeting/js/reducers/GreetingReducer.js)
