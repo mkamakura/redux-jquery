@@ -43,7 +43,11 @@ this.$selector.find('.js-decrement').on('click', () => this.dispatch(actions.dec
 **役割**
 - `state`の変更に伴う画面の再描画を行う
 
-[import:13-15](../../examples/counter/js/components/Counter.js)
+```
+render() {
+    this.$result.text(this.state.result);
+  }
+```
 
 ## Action
 **役割**
