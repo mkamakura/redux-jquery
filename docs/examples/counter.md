@@ -30,7 +30,11 @@ constructor(selector, store, ...stateNames)
 - イベントハンドラのセット
 - `render()`で使用するセレクタがある場合は定義しておく
 
-[import:8-10](../../examples/counter/js/components/Counter.js)
+```js
+this.$result = this.$selector.find('.js-result');
+    this.$selector.find('.js-increment').on('click', () => this.dispatch(actions.increment()));
+    this.$selector.find('.js-decrement').on('click', () => this.dispatch(actions.decrement()));
+```
 
 `super(selector, store, 'result');`は、 `state`の`result`に変更があったら`render()`を実行するように定義している。
 イベントハンドラのセットでは`click`イベントが発生したら`store.dispatch()`を実行するようにしている。
