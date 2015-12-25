@@ -83,7 +83,7 @@ const store = createStore(todoApp);
 
 `reducer`の中で以下のことをやってはいけません
 - 引数の`state`, `action`インスタンスの値を変更する
-- 副作用を起こす(APIを呼んだり、ルーティングを変えるなどなど)
+- 副作用を起こす(APIを呼んだり、ルーティングを変えるなど)
 - 毎回値が変わるもの(`Date.now()`や`Math.random()`)を扱う
 
 ### Middleware
