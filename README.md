@@ -14,4 +14,5 @@ npm run build
 `examples`にあるそれぞれのディレクトリ配下にある`index.html`をブラウザで開いてください。
 
 ## GitBook
-https://www.gitbook.com/book/mkamakura/redux-jquery/details
+- Japanese: https://www.gitbook.com/book/mkamakura/redux-jquery/details
+- Vietnamese: https://www.gitbook.com/book/mkamakura/redux-jquery-vn/details
