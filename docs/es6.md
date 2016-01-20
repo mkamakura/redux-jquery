@@ -133,7 +133,7 @@ class StatusCode {
     
     setTimeout(() => console.log(this.statusCode, 'OK'), 1000);
   
-    self = this;
+    const self = this;
     setTimeout(function() {
       if (this.statusCode === undefined) console.log('`this.statusCode` is `undefined` in function');
       console.log(self.statusCode, 'OK');
