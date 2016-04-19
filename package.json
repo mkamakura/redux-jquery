@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test:ava": "ava",
     "test:eslint": "eslint examples",
     "test:textlint": "textlint --preset preset-japanese docs",
     "test": "npm-run-all test:*",
@@ -24,10 +25,12 @@
     "redux-thunk": "1.0.0"
   },
   "devDependencies": {
+    "ava": "0.14.0",
     "babel": "6.3.13",
     "babel-eslint": "4.1.6",
     "babelify": "6.3.0",
     "eslint": "1.10.3",
+    "eslint-plugin-ava": "^2.2.1",
     "eslint-plugin-babel": "3.0.0",
     "gitbook": "2.6.6",
     "gitbook-cli": "1.0.1",
@@ -48,6 +51,14 @@
           "sourceMap": true
         }
       ]
+    ]
+  },
+  "ava": {
+    "files":
+      "examples/counter/js/test/**/test*.js"
+    ],
+    "require": [
+      "babel-core/register"
     ]
   }
 }
