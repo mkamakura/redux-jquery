@@ -54,7 +54,7 @@
     ]
   },
   "ava": {
-    "files":
+    "files": [
       "examples/counter/js/test/**/test*.js"
     ],
     "require": [
