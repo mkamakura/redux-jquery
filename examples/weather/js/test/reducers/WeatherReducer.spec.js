@@ -6,7 +6,7 @@ test('should provide the initial state', (t) => {
 });
 
 test('should handle UPDATE_WEATHER action', (t) => {
-  t.truthy(WeatherReducer({}, {type: 'UPDATE_WEATHER', payload: ['weather']}), {data:['weather'], message: ''});
+  t.deepEqual(WeatherReducer({}, {type: 'UPDATE_WEATHER', payload: ['weather']}), {data:['weather'], message: ''});
 });
 
 test('should handle FETCH_EXCEPTION action', (t) => {

@@ -15,12 +15,12 @@ export const TodoReducer = handleActions({
     });
   },
   [ADD_TODO]: (state, action) => [
+    ...state,
     {
       id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
       text: action.payload.text,
       status: TODO_STATUS.ACTIVE
-    },
-    ...state
+    }
   ],
   [DELETE_TODO]: (state, action) => state.filter((todo) => todo.id !== action.payload),
   [COMPLETE_TODO]: (state, action) => state.map(

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:ava": "ava",
+    "test:ava": "ava -v",
     "test:eslint": "eslint examples",
     "test:textlint": "textlint --preset preset-japanese docs",
     "test": "npm-run-all test:*",
@@ -55,9 +55,7 @@
   },
   "ava": {
     "files": [
-      "examples/counter/js/test/**/test*.js",
-      "examples/greeting/js/test/**/test*.js",
-      "examples/weather/js/test/**/test*.js"
+      "examples/**/*.spec.js"
     ],
     "require": [
       "babel-core/register"
