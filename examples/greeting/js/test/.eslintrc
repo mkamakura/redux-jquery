@@ -1,0 +1,21 @@
+{
+  "plugins": ["babel", "ava"],
+  "rules": {
+    "new-cap": 0,
+    "babel/new-cap": 0,
+    "babel/new-cap": 0,
+    "babel/arrow-parens": 0,
+    "ava/no-cb-test": 2,
+    "ava/no-identical-title": 2,
+    "ava/no-invalid-end": 2,
+    "ava/no-only-test": 2,
+    "ava/no-skip-assert": 2,
+    "ava/no-skip-test": 2,
+    "ava/no-todo-test": 1,
+    "ava/prefer-power-assert": 2,
+    "ava/test-ended": 2,
+    "ava/test-title": [2, "always"],
+    "ava/use-t": 2,
+    "ava/use-test": 2
+  }
+}

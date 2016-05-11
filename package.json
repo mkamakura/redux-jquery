@@ -55,7 +55,9 @@
   },
   "ava": {
     "files": [
-      "examples/counter/js/test/**/test*.js"
+      "examples/counter/js/test/**/test*.js",
+      "examples/greeting/js/test/**/test*.js",
+      "examples/weather/js/test/**/test*.js"
     ],
     "require": [
       "babel-core/register"
