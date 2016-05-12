@@ -1,18 +1,15 @@
 # redux-jquery
-
-## 概要
-- Redux+jQueryを用いたサンプル集
+- Redux+jQuery samples
 - ES2015(babel)
-- **Reactは使用しません**
+- **This sample don't use React**
+ - You can learn focus on redux
 
-## サンプルの実行方法
+## build
 ```
 git clone https://github.com/mkamakura/redux-jquery.git
 cd redux-jquery && npm i
-npm run build
+npm start
 ```
-
-`examples`にあるそれぞれのディレクトリ配下にある`index.html`をブラウザで開いてください。
 
 ## GitBook
 - Japanese: https://www.gitbook.com/book/mkamakura/redux-jquery/details
