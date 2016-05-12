@@ -9,6 +9,7 @@ git clone https://github.com/mkamakura/redux-jquery.git
 cd redux-jquery && npm i
 npm start
 ```
+Lunch local server and wachify.
 
 ## GitBook
 - Japanese: https://www.gitbook.com/book/mkamakura/redux-jquery/details
