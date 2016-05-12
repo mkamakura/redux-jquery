@@ -2,7 +2,6 @@
 - Redux+jQuery exsamples
 - ES2015(babel)
 - **This exsamples don't use React**
- - You can learn focus on redux
 
 ## build
 ```
