@@ -11,7 +11,7 @@
     "build:gitbook": "gitbook build",
     "serve:gitbook": "gitbook serve",
     "build": "globify \"examples/**/js/index.js\" --outfile=build",
-    "watch": "globify \"examples/**/js/index.js\" --outfile=build -d -w"
+    "start": "globify \"examples/**/js/index.js\" --outfile=build -d -w"
   },
   "author": "Masaya Kamakura <kamakura.masaya@gmail.com> (https://github.com/mkamakura)",
   "license": "MIT",
