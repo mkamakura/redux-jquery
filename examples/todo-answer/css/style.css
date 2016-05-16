@@ -1,26 +1,147 @@
-.completed {
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.l-body {
+  border: 1px solid #DDD;
+  color: #444;
+  margin: 20px auto;
+  padding: 20px;
+  width: 95%;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.title {
+  border-bottom: 1px solid skyblue;
+  border-left: 5px solid skyblue;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+/* cf */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* input */
+.mod-input {
+  appearance: none;
+  border: 1px solid cadetblue;
+  margin-right: 10px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* btn */
+.mod-btn {
+  border: 1px solid cadetblue;
+  color: cadetblue;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 90px;
+  padding: 1px 7px;
+  text-align: center;
+}
+
+.mod-btn:hover,
+.mod-btn:focus {
+  background-color: cadetblue;
+  border: 1px solid #EEE;
+  color: white;
+  opacity: .75;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.mod-btn.is-active {
+  background-color: cadetblue;
+  border: 1px solid #EEE;
+  color: white;
+}
+
+.mod-btn_delete {
+  border-color: darkgray;
   color: darkgray;
+}
+
+.mod-btn_delete:hover,
+.mod-btn_delete:focus,
+.mod-btn_delete.is-active {
+  background-color: darkgray;
+}
+
+.mod-btn_complete {
+  border-color: orangered;
+  color: orangered;
+}
+
+.mod-btn_complete:hover,
+.mod-btn_complete:focus,
+.mod-btn_complete.is-active {
+  background-color: orangered;
+}
+
+.mod-btn_active {
+  border-color: yellowgreen;
+  color: yellowgreen;
+}
+
+.mod-btn_active:hover,
+.mod-btn_active:focus,
+.mod-btn_active.is-active {
+  background-color: yellowgreen;
+}
+
+/* list */
+.todoList {
+  border-bottom: 1px solid dodgerblue;
+  border-top: 1px solid dodgerblue;
+}
+
+.todoList-item {
+  border-bottom: 1px solid dodgerblue;
+  padding: 10px;
+}
+
+.todoList-item-text {
+  float: left;
+}
+
+.todoList-item-btn {
+  float: right;
+  margin-right: 10px;
+}
+
+.todoList-item.is-complete {
+  background-color: #fafafa;
+  color: #AAA;
+}
+
+.todoList-item.is-complete .todoList-item-elem {
   text-decoration: line-through;
 }
 
-.delete {
-  float: right;
-  font-size: small;
-  color: grey;
-  cursor: pointer;
-  margin-right: 7px;
-}
-
-.complete {
-  float: right;
-  font-size: small;
-  cursor: pointer;
-  color: deepskyblue;
-}
-
-.active {
-  float: right;
-  font-size: small;
-  cursor: pointer;
-  color: deepskyblue;
+.todoList-item:last-child {
+  border-bottom: none;
 }

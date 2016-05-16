@@ -10,5 +10,5 @@ const createStoreWithMiddleware = applyMiddleware(createLogger())(createStore);
 const store = createStoreWithMiddleware(RootReducer);
 
 domReady(() => {
-  new Todo('.todo', store);
+  new Todo('.js-l-body', store);
 });
