@@ -1,7 +1,7 @@
 # redux-jquery
 - Redux+jQuery exsamples
 - ES2015(babel)
-- **This exsamples don't use React**
+- **This examples don't use React**
 
 ## build
 ```
