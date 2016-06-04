@@ -1,5 +1,5 @@
 # redux-jquery
-- Redux+jQuery exsamples
+- Redux+jQuery examples
 - ES2015(babel)
 - **This examples don't use React**
 
