@@ -293,7 +293,7 @@ promise.then((result) => {
 
 Promiseオブジェクトを自分で作る
 ```js
-var promise = new Promise(function(resolve, reject) {
+var promise = new Promise((resolve, reject) => {
  // 非同期の処理
  // 処理が終わったら、resolve または rejectを呼ぶ
 });
