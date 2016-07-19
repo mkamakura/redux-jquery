@@ -297,7 +297,7 @@ function asyncFunction() {
 　　return new Promise(function (resolve, reject)　{
 　　　　setTimeout(function () {
 　　　　　if (false) {
-            reject(new Error());
+            reject(new Error('ERROR!'));
          }
 　　　　　resolve('Async Hello world');
 　　　 }, 16);
