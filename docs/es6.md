@@ -49,6 +49,26 @@ const c = 1; // 再代入不可な値（推奨）
 
 また、`let`, `const`は`var`とスコープのルールが違います。
 
+```js
+function varTest() {
+  var x = 1;
+  if (true) {
+    var x = 2; // same variable! 
+    console.log(x); // 2 
+  } 
+  console.log(x); // 2
+} 
+
+function letTest() { 
+  let x = 1; 
+  if (true) { 
+    let x = 2; // different variable 
+    console.log(x); // 2
+  } 
+  console.log(x); // 1 
+}
+```
+
 ### Templete Strings
 
 文字列結合が簡単に書けます。バッククォートで囲った文字列の`${}`は展開されます。またバッククォート内は改行できます。
