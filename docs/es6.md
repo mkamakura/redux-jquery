@@ -281,6 +281,8 @@ getAsync("fileA.txt", function(error, result){ if(error){// 取得失敗時の�
 
 ```
 
+// なにがうれしいか
+
 ## おまけ:ES5で積極的に使ってほしい機能
 
 ### Array.prototype.forEach\(\)
