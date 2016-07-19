@@ -58,7 +58,7 @@ var errorMessage = `file not found.`;
 console.log('Error!! Code: ' + errorCode + ', Message: ' + errorMessage);
 // Error!! Code: 404, Message: file not found.
 
-// ES6
+// ES2015
 const errorCode = 404;
 const errorMessage = `file not found.`;
 console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
@@ -117,7 +117,7 @@ $('.hoge').on('change', function(event) {
   console.log(event);
 });
 
-// ES6
+// ES2015
 $('.hoge').on('change', (event) => {
   console.log(event);
 });
@@ -161,7 +161,7 @@ const statusCode = new StatusCode(200);
 // ES5
 var obj = { "name": "Masaya Kamakura" };
 
-// ES6
+// ES2015
 // key名とvalueの変数名が同じであえば省略可能
 function getNameObject(name) {
   return { name };
@@ -307,7 +307,7 @@ console.log(max); // 5
 
 ## おわりに
 
-この資料で紹介した機能はES6の仕様でもごく一部です。さらに勉強したい方のために参考資料を残しておきます。
+この資料で紹介した機能はES2015の仕様でもごく一部です。さらに勉強したい方のために参考資料を残しておきます。
 またES5で便利な関数も紹介しました。`for`,`if`,`switch`等を使わなくても書けることが多いので、ES5の機能で書けないか考えるようにしましょう。
 
 ## 参考資料
