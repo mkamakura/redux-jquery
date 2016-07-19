@@ -14,9 +14,7 @@
 
 **背景**
 
-`ES2015`の仕様確定が2015年6月にされましたが、すぐに新仕様が使えるわけではありません。
-JavaScriptエンジン\(V8,JavaScriptCore,Chakra等\)の実装は現在進行中でまだ使えない機能があるためです。
-[こちら](https://kangax.github.io/compat-table/es6/)のサイトで各ブラウザに実装済みの機能が確認できます。
+`ES2015`の仕様確定が2015年6月にされましたが、すぐに新仕様が使えるわけではありません。JavaScriptエンジン\(V8,JavaScriptCore,Chakra等\)の実装は現在進行中でまだ使えない機能があるためです。[こちら](https://kangax.github.io/compat-table/es6/)のサイトで各ブラウザに実装済みの機能が確認できます。
 
 ブラウザとJavaScriptエンジンの対応は以下の表のとおりです。
 
