@@ -296,7 +296,7 @@ Promiseのworkflowを見てみましょう。
 function asyncFunction() {
   return new Promise(function (resolve, reject)　{
     setTimeout(function () {
-      if (false) {
+      if (false) { // この例では実行させない
         reject(new Error('ERROR!'));
       }
 　　　　resolve('Async Hello world');
