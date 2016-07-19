@@ -311,8 +311,6 @@ asyncFunction().then(function (value) {
 });
 ```
 
-// なにがうれしいか
-
 ## おまけ:ES5で積極的に使ってほしい機能
 
 ### Array.prototype.forEach\(\)
