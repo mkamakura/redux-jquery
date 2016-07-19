@@ -1,43 +1,48 @@
-# ES6 Frist Step
+# ES2015 Frist Step
 
 ## はじめに
+
 `JavaScript`は`ECMAScript`という仕様のもとに実装されています。`ECMAScript6(ES6)`は`ECMAScript`の新しい標準仕様です。この仕様は2015年6月に確定しました。
 `ES5`から6年ぶりのメジャーアップデートのため最初は違和感があるかもしれません。
 しかし、より便利になるアップデートですのでしっかりキャッチアップし積極的に使用していきましょう。
 
 ### ES6 or ES2015?
+
 ネット上で`ES6`と`ES2015`を見かけると思いますが、両方とも同じものを指しています。
 正確には`ES2015`が正しいです。来年以降も`ES2016`,`ES2017`…とアップデート予定です。
-当初は`ES6`として仕様検討が始まったためその名残りで残っています。この資料では`ES6`で統一させていただきます。(短いほうが読みやすいので)
+当初は`ES6`として仕様検討が始まったためその名残りで残っています。この資料では`ES6`で統一させていただきます。\(短いほうが読みやすいので\)
 
 ### Babel
 
 **背景**
 
 `ES6`の仕様確定が2015年6月にされましたが、すぐに新仕様が使えるわけではありません。
-JavaScriptエンジン(V8,JavaScriptCore,Chakra等)の実装は現在進行中でまだ使えない機能があるためです。
+JavaScriptエンジン\(V8,JavaScriptCore,Chakra等\)の実装は現在進行中でまだ使えない機能があるためです。
 [こちら](https://kangax.github.io/compat-table/es6/)のサイトで各ブラウザに実装済みの機能が確認できます。
 
 ブラウザとJavaScriptエンジンの対応は以下の表のとおりです。
 
-|ブラウザ|JavaScriptエンジン|
-|-|-|
-|IE|Chakra|
-|Chrome|V8|
-|Opera|V8|
-|Safari|JavaScriptCore|
-|FireFox|SpiderMonkey|
+| ブラウザ | JavaScriptエンジン |
+| :--- | :--- |
+| IE | Chakra |
+| Chrome | V8 |
+| Opera | V8 |
+| Safari | JavaScriptCore |
+| FireFox | SpiderMonkey |
 
 **Babel**
 
-ブラウザに新仕様が追加されるまで新仕様を導入することがきません。そこで登場したのが`Babel`で、`Babel`は`ES6`のコードを`ES5`のコードにトランスパイルしてくれるツールです([公式サイト](https://babeljs.io/))。来年以降の`ES2016`,`ES2017`についても先行実装されているので今後も使用され続けると言われています。
+ブラウザに新仕様が追加されるまで新仕様を導入することがきません。そこで登場したのが`Babel`で、`Babel`は`ES6`のコードを`ES5`のコードにトランスパイルしてくれるツールです\([公式サイト](https://babeljs.io/)\)。来年以降の`ES2016`,`ES2017`についても先行実装されているので今後も使用され続けると言われています。
 実際の開発でも`Babel`を使ってトランスパイルし、ブラウザはトランスパイル後のJavaScriptコードを読み込むことになります。
 
 ## ES6新規仕様
+
 ここでは特によく使われている仕様を説明します。
 
 ### let, const
+
 `let`, `const`はブロックスコープの変数宣言かできます。`const`は再代入不可な値を宣言します。これまで使われていた`var`は使用しないようにしましょう。基本は`const`、どうしても再代入が必要な場合のみ`let`を使用するようにしましょう。
+
 ```js
 // ES5
 var a = 1;
@@ -48,7 +53,9 @@ const c = 1; // 再代入不可な値（推奨）
 ```
 
 ### Templete Strings
+
 文字列結合が簡単に書けます。バッククォートで囲った文字列の`${}`は展開されます。またバッククォート内は改行できます。
+
 ```js
 // ES5
 var errorCode = 404;
@@ -64,6 +71,7 @@ console.log(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
 ```
 
 ### Class
+
 クラスの宣言ができます。
 
 ```js
@@ -92,7 +100,9 @@ console.log(admin.say()); // [Administrator] My name is Bob
 ```
 
 ### Default Parameters
+
 関数の引数にデフォルト値を設定できます。
+
 ```js
 function consoleName(name = 'Taro') {
   console.log(`username: ${name}`);
@@ -103,6 +113,7 @@ consoleName('Masaya'); // Masaya
 ```
 
 ### Arrow Function
+
 functionを`=>`に置換できます。
 
 ```js
@@ -122,17 +133,18 @@ $('.hoge').on('change', (event) => console.log(event));
 **※注意点**
 
 `this`の扱いが`function`と`=>`で異なります。
+
 ```js
 class StatusCode {
   constructor(statusCode) {
     this.statusCode = statusCode;
-    
+
     setTimeout(() => {
       console.log(this.statusCode, 'OK');
     }, 1000);
-    
+
     setTimeout(() => console.log(this.statusCode, 'OK'), 1000);
-  
+
     const self = this;
     setTimeout(function() {
       if (this.statusCode === undefined) console.log('`this.statusCode` is `undefined` in function');
@@ -143,11 +155,13 @@ class StatusCode {
 
 const statusCode = new StatusCode(200);
 ```
+
 `Allow Function`内の`this`は`StatusCode`クラスの`this`を参照するのに対し、`function()`はグローバオブジェクトの`this`を参照している。グローバルオブジェクトの`this`に`statusCode`は宣言していないので`undefined`となります。
 
-
 ### Enhanced Object Literals
+
 オブジェクトリテラルが拡張されました。
+
 ```js
 // ES5
 var obj = { "name": "Masaya Kamakura" };
@@ -173,8 +187,10 @@ console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
 ```
 
 ### Spread
+
 配列を展開して返します。
 配列に要素を追加して、新しい配列を作るときによく利用されます。
+
 ```js
 const list = [1, 2, 3];
 console.log(...list); // 1 2 3
@@ -184,9 +200,10 @@ const newList = [0, ...list];
 console.log(newList); // [0, 1, 2, 3]
 ```
 
-### Import/Export
-- `import`: 外部モジュールを読み込む
-- `export`: 外部モジュールで利用できるようにする
+### Import\/Export
+
+* `import`: 外部モジュールを読み込む
+* `export`: 外部モジュールで利用できるようにする
 
 ```js
 // a.js
@@ -205,8 +222,10 @@ export function hoge2() {};
 `{}`は`export`時に`default`がない場合に必要となる。`* as fuge`すべてのモジュールを読み込んでくれるので便利なのですが
 、なるべく使わないようにしましょう（トランスパイル後のファイルサイズが増えてしまうためです）。
 
-### Object.assign(target, ...sources)
+### Object.assign\(target, ...sources\)
+
 1つ以上の`source`オブジェクトの保有する全てのプロパティを`target`にコピーします。戻り値は`target`オブジェクトになります。
+
 ```js
 const todo = {
   id: 1,
@@ -221,8 +240,10 @@ console.log(newTodo);
 
 ## おまけ:ES5で積極的に使ってほしい機能
 
-### Array.prototype.forEach()
+### Array.prototype.forEach\(\)
+
 与えられた関数を、配列の各要素に対して一度ずつ実行します。
+
 ```js
 const data = [1, 2, 3, 4, 5];
 data.forEach((val) => console.log(val));
@@ -230,17 +251,21 @@ data.forEach((val) => console.log(val));
 
 for文だとループ変数が必要であったり、階層が深くなると可読性が下がるので使用しないようにしましょう。
 
-### Array.prototype.map()
+### Array.prototype.map\(\)
+
 与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。
 `Array.prototype.forEach()`と似ていますが、新しい配列を生成するところに違いがあります。
+
 ```js
 const data = [1, 2, 3, 4, 5];
 const square = data.map((val) => val * val);
 console.log(square); // [1, 4, 9, 16, 25]
 ```
 
-### Array.prototype.filter()
+### Array.prototype.filter\(\)
+
 引数として与えられたテスト関数を各配列要素に対して実行し、それに合格したすべての配列要素からなる新しい配列を生成します。
+
 ```js
 const data = [1, 2, 3, 4, 5];
 // 要素が4未満の場合のみ2乗した結果を返す
@@ -249,8 +274,10 @@ const filterSquare = data.filter((val) => val < 4)
 console.log(filterSquare); // [1, 4, 9]
 ```
 
-### Array.prototype.reduce()
+### Array.prototype.reduce\(\)
+
 隣り合う 2 つの配列要素に対して（左から右へ）同時に関数を適用し、単一の値にします。
+
 ```js
 const data = [1, 2, 3, 4, 5];
 
@@ -263,32 +290,37 @@ console.log(max); // 5
 
 **sumの例**
 
-||pre|current|return|
-|-|-|-|
-|1st|1|2|3|
-|2nd|3|3|6|
-|3rd|6|4|10|
-|4th|10|5|15|
+| pre | current | return |
+| :--- | :--- | :--- |
+| 1st | 1 | 2 | 3 |
+| 2nd | 3 | 3 | 6 |
+| 3rd | 6 | 4 | 10 |
+| 4th | 10 | 5 | 15 |
+
 結果: 15
 
 **maxの例**
 
-||pre|current|return|
-|-|-|-|
-|1st|1|2|2|
-|2nd|2|3|3|
-|3rd|3|4|4|
-|4th|4|5|5|
+| pre | current | return |
+| :--- | :--- | :--- |
+| 1st | 1 | 2 | 2 |
+| 2nd | 2 | 3 | 3 |
+| 3rd | 3 | 4 | 4 |
+| 4th | 4 | 5 | 5 |
+
 結果: 5
 
 ## おわりに
+
 この資料で紹介した機能はES6の仕様でもごく一部です。さらに勉強したい方のために参考資料を残しておきます。
 またES5で便利な関数も紹介しました。`for`,`if`,`switch`等を使わなくても書けることが多いので、ES5の機能で書けないか考えるようにしましょう。
 
 ## 参考資料
-- https://babeljs.io/
-- https://babeljs.io/docs/learn-es2015/
-- http://sssslide.com/www.slideshare.net/teppeis/es6-in-practice
-- https://kangax.github.io/compat-table/es6/
-- https://developer.mozilla.org/ja/docs/Web/JavaScript
-- http://azu.github.io/promises-book/
+
+* [https:\/\/babeljs.io\/](https://babeljs.io/)
+* [https:\/\/babeljs.io\/docs\/learn-es2015\/](https://babeljs.io/docs/learn-es2015/)
+* [http:\/\/sssslide.com\/www.slideshare.net\/teppeis\/es6-in-practice](http://sssslide.com/www.slideshare.net/teppeis/es6-in-practice)
+* [https:\/\/kangax.github.io\/compat-table\/es6\/](https://kangax.github.io/compat-table/es6/)
+* [https:\/\/developer.mozilla.org\/ja\/docs\/Web\/JavaScript](https://developer.mozilla.org/ja/docs/Web/JavaScript)
+* [http:\/\/azu.github.io\/promises-book\/](http://azu.github.io/promises-book/)
+
