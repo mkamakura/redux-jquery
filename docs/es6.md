@@ -278,7 +278,7 @@ getAsync("fileA.txt", function(error, result){ if(error){// 取得失敗時の�
 
 `Promise`を使った例
 ```js
-
+var promise = getAsyncPromise("fileA.txt"); promise.then(function(result){ // 取得成功の処理 }).catch(function(error){ // 取得失敗時の処理 });
 ```
 
 // なにがうれしいか
