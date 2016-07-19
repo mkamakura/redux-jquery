@@ -305,9 +305,9 @@ function asyncFunction() {
 }
 
 asyncFunction().then(function (value) {
-　　console.log(value); // => 'Async Hello world'
+　　console.log(value); // 'Async Hello world'
 }).catch(function (error) {
-　 console.log(error);
+　 console.log(error); // reject()が実行された場合はこの行が処理される
 });
 ```
 
