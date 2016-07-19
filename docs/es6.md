@@ -291,12 +291,9 @@ promise.then((result) => {
 });
 ```
 
-Promiseオブジェクトを自分で作る
+Promiseのworkflowを見てみましょう。
 ```js
-var promise = new Promise((resolve, reject) => {
- // 非同期の処理
- // 処理が終わったら、resolve または rejectを呼ぶ
-});
+function asyncFunction() { return new Promise(function (resolve, reject) { setTimeout(function () { resolve('Async Hello world'); }, 16); }); } asyncFunction().then(function (value) { console.log(value); // => 'Async Hello world' }).catch(function (error) { console.log(error); });
 ```
 
 // なにがうれしいか
