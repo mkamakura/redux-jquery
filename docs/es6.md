@@ -300,7 +300,7 @@ function asyncFunction() {
         reject(new Error('ERROR!'));
       }
 　　　　resolve('Async Hello world');
-  }, 16);
+    }, 16);
   });
 }
 
