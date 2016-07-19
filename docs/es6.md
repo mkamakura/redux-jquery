@@ -152,8 +152,12 @@ $('.hoge').on('change', function(event) {
 $('.hoge').on('change', (event) => {
   console.log(event);
 });
-// 中身が式なら`{}`を省略可能であるが、関数の結果が`return`される
+// 中身が式なら`{}`を省略可能
 $('.hoge').on('change', (event) => console.log(event));
+
+// 式で書いた場合は、結果がreturnされます
+const multify = (val) => val * val;
+console.log(multify(5)); // 25
 ```
 
 **※注意点**
