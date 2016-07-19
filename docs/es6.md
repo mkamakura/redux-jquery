@@ -268,7 +268,18 @@ console.log(newTodo);
 ```
 
 ### Promise
-todo
+
+`callback`のような非同期プログラミングで使用する。
+
+`callback`を使った例
+```js
+getAsync("fileA.txt", function(error, result){ if(error){// 取得失敗時の処理 throw error; } // 取得成功の処理 });
+```
+
+`Promise`を使った例
+```js
+
+```
 
 ## おまけ:ES5で積極的に使ってほしい機能
 
