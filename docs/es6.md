@@ -273,12 +273,22 @@ console.log(newTodo);
 
 `callback`を使った例
 ```js
-getAsync("fileA.txt", function(error, result){ if(error){// 取得失敗時の処理 throw error; } // 取得成功の処理 });
+getAsync("fileA.txt", (error, result) => {
+  if(error){// 取得失敗時の処理
+    throw error;
+  }
+  // 取得成功の処理
+});
 ```
 
 `Promise`を使った例
 ```js
-var promise = getAsyncPromise("fileA.txt"); promise.then(function(result){ // 取得成功の処理 }).catch(function(error){ // 取得失敗時の処理 });
+var promise = getAsyncPromise("fileA.txt");
+promise.then((result) => {
+  // 取得成功の処理
+}).catch((error) => {
+  // 取得失敗時の処理
+});
 ```
 
 // なにがうれしいか
