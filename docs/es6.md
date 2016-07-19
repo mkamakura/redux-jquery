@@ -98,7 +98,7 @@ console.error(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
 
 ### Class
 
-クラスの宣言ができます。
+クラスの宣言ができます。`extends`による継承や、`instance object`が生成直後に実行される`constructor`が使用できます。
 
 ```js
 class User {
