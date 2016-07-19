@@ -283,7 +283,7 @@ getAsync("fileA.txt", (error, result) => {
 
 `Promise`を使った例
 ```js
-var promise = getAsyncPromise("fileA.txt");
+var promise = getAsyncPromise("fileA.txt"); // textを取得してPromiseを返す
 promise.then((result) => {
   // 取得成功の処理
 }).catch((error) => {
