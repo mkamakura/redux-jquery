@@ -73,6 +73,13 @@ function letTest() {
 
 *2.宣言されるpropaty*
 
+```js
+var x = 'global';
+let y = 'global';
+console.log(this.x); // "global" 
+console.log(this.y); // undefined
+```
+
 ### Templete Strings
 
 文字列結合が簡単に書けます。バッククォートで囲った文字列の`${}`は展開されます。またバッククォート内は改行できます。
