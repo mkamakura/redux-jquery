@@ -234,6 +234,7 @@ console.log(newTodo);
 ```
 
 ### Promise
+todo
 
 ## おまけ:ES5で積極的に使ってほしい機能
 
