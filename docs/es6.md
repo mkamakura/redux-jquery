@@ -47,9 +47,7 @@ let b = 1; // 再代入不可能な値（再代入が必要なときのみ使用
 const c = 1; // 再代入不可な値（推奨）
 ```
 
-また、`let`, `const`は`var`と以下の違いがあります。
-
-*1.スコープのルール*
+`let`, `const`は`var`とはスコープのルールが違います。
 
 ```js
 function varTest() {
@@ -71,7 +69,7 @@ function letTest() {
 }
 ```
 
-*2.宣言されるpropaty*
+これは`var`が`global object`の`property`となるためです。(ブラウザの場合は`window object`)
 
 ```js
 var x = 'global';
