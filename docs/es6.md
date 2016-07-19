@@ -86,13 +86,14 @@ console.log(this.y); // undefined
 // ES5
 var errorCode = 404;
 var errorMessage = `file not found.`;
-console.error('Error!! Code: ' + errorCode + ', Message: ' + errorMessage);
+console.error('Error!! Code: ' + errorCode + '\n Message: ' + errorMessage);
 // Error!! Code: 404, Message: file not found.
 
 // ES2015
 const errorCode = 404;
 const errorMessage = `file not found.`;
-console.error(`Error!! Code: ${errorCode}, Message: ${errorMessage}`);
+console.error(`Error!! Code: ${errorCode}
+  Message: ${errorMessage}`);
 // Error!! Code: 404, Message: file not found.
 ```
 
