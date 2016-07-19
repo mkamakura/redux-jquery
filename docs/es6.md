@@ -47,7 +47,9 @@ let b = 1; // 再代入不可能な値（再代入が必要なときのみ使用
 const c = 1; // 再代入不可な値（推奨）
 ```
 
-また、`let`, `const`は`var`とスコープのルールが違います。
+また、`let`, `const`は`var`と以下の違いがあります。
+
+*1.スコープのルール*
 
 ```js
 function varTest() {
@@ -68,6 +70,8 @@ function letTest() {
   console.log(x); // 1 
 }
 ```
+
+*2.宣言されるpropaty*
 
 ### Templete Strings
 
