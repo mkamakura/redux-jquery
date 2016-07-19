@@ -249,8 +249,7 @@ export function hoge1() {};
 export function hoge2() {};
 ```
 
-`{}`は`export`時に`default`がない場合に必要となる。`* as fuge`はすべてのモジュールを読み込んでくれるので便利なのですが
-、なるべく使わないようにしましょう（トランスパイル後のファイルサイズが増えてしまうためです）。
+`{}`は`export`時に`default`がない場合に必要となる。`* as fuge`はすべてのモジュールを読み込みます。
 
 ### Object.assign\(target, ...sources\)
 
