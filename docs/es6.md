@@ -293,7 +293,19 @@ promise.then((result) => {
 
 Promiseのworkflowを見てみましょう。
 ```js
-function asyncFunction() { return new Promise(function (resolve, reject) { setTimeout(function () { resolve('Async Hello world'); }, 16); }); } asyncFunction().then(function (value) { console.log(value); // => 'Async Hello world' }).catch(function (error) { console.log(error); });
+function asyncFunction() {
+　　return new Promise(function (resolve, reject)　{
+　　　　setTimeout(function () {
+　　　　　resolve('Async Hello world');
+　　　 }, 16);
+　　});
+}
+
+asyncFunction().then(function (value) {
+　　console.log(value); // => 'Async Hello world'
+}).catch(function (error) {
+　 console.log(error);
+});
 ```
 
 // なにがうれしいか
