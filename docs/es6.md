@@ -225,8 +225,11 @@ APIがいくつか追加されました。ここでは`includes`と`repeat`、`s
 ```
 "abcde".includes("cd") // true
 "abcde".includes("dd") // false
+
 "abc".repeat(3) // "abcabcabc"
+
 "abcde".startsWith("abc") // true
+"abcde".startsWith("de") // true
 ```
 
 - includes()
