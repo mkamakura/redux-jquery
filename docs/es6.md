@@ -336,6 +336,16 @@ Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3
   .then(function(results) { console.log(results); }); 
 ```
 
+このような機能のおかげで`callback地獄`になりにくいコード書くことができます。上記の`Promise.all()`の例を`callback`で書くこと以下のようになります。
+
+```
+getAsync(url1, (res) => {
+  getAsync(url2, (res) => {
+    getAsync(url3, (res) => {
+      //  すべてのデータを取得後の処理    
+}) })})
+```
+
 *※補足*
 *`Promise`以外にも`generator(ES2015)`や`aync function(ES Next)`のような非同期プログラミングをするための機能があります。*
 
