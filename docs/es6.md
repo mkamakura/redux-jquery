@@ -391,7 +391,7 @@ console.log(max); // 5
 
 **sumの例**
 
-| pre | current | return |
+| | pre | current | return |
 | :--- | :--- | :--- |
 | 1st | 1 | 2 | 3 |
 | 2nd | 3 | 3 | 6 |
@@ -402,7 +402,7 @@ console.log(max); // 5
 
 **maxの例**
 
-| pre | current | return |
+| | pre | current | return |
 | :--- | :--- | :--- |
 | 1st | 1 | 2 | 2 |
 | 2nd | 2 | 3 | 3 |
