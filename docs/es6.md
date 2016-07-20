@@ -158,7 +158,7 @@ $('.hoge').on('change', (event) => console.log(event));
 $('.hoge').on('change', event => console.log(event));
 
 // 式で書いた場合は、結果がreturnされます
-const multify = (val) => val * val;
+const multify = val => val * val;
 console.log(multify(5)); // 25
 ```
 
