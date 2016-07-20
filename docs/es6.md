@@ -343,7 +343,9 @@ getAsync(url1, (res) => {
   getAsync(url2, (res) => {
     getAsync(url3, (res) => {
       //  すべてのデータを取得後の処理    
-}) })})
+    });
+  });
+});
 ```
 
 *※補足*
