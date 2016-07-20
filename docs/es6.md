@@ -246,7 +246,7 @@ const newList = [0, ...list];
 console.log(newList); // [0, 1, 2, 3]
 ```
 
-### Import\/Export
+### Import/Export
 
 * `import`: 外部モジュールを読み込む
 * `export`: 外部モジュールで利用できるようにする
