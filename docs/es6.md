@@ -327,13 +327,11 @@ function getAsyncPromise(url) {
 `Promise`には`Promise.all()`,`Promise.race()`という機能が用意されています。どちらも並列に非同期処理を実行させることができます。違いは`then`,`catch`が実行されるタイミングです。
 
 ```
-const lists = [getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3) ];
-
 // Promise.all()のthen()はすべての処理が完了(resolve/reject)したら実行される
-Promise.all(lists).then(function(results) { console.log(results); }); 
+Promise.all([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3)]).then(function(results) { console.log(results); }); 
 
 // Promise.race()のthen()はどれか一つでも完了(resolve/reject)したら実行される（他の処理が中断されることではない）
-Promise.race(lists).then(function(results) { console.log(results); }); 
+Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3)]).then(function(results) { console.log(results); }); 
 ```
 
 *※補足*
