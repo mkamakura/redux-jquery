@@ -154,6 +154,7 @@ $('.hoge').on('change', (event) => {
 });
 // 中身が式なら`{}`を省略可能
 $('.hoge').on('change', (event) => console.log(event));
+// 引数が1つの場合は`()`を省略可能
 
 // 式で書いた場合は、結果がreturnされます
 const multify = (val) => val * val;
