@@ -223,7 +223,8 @@ console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
 APIがいくつか追加されました。ここでは`includes`と`repeat`、`startsWith`を紹介します。その他の機能は[こちら](https://kangax.github.io/compat-table/es6/#test-String.prototype_methods)を参考にしてください。
 
 ```
-"abcde".includes("cd") // true 
+"abcde".includes("cd") // true
+"abcde".includes("dd") // false
 "abc".repeat(3) // "abcabcabc"
 "abcde".startsWith("abc") // true
 ```
