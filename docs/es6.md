@@ -324,7 +324,7 @@ function getAsyncPromise(url) {
 }
 ```
 
-`Promise`には`Promise.all()`という機能が用意されています。`Promise.all()`は並列に非同期処理を実行させることができます。
+`Promise`には`Promise.all()`,`Promise.race()`という機能が用意されています。`Promise.all()`は並列に非同期処理を実行させることができます。
 
 ```
 const lists = [getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3) ];
