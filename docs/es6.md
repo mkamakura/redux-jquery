@@ -188,7 +188,7 @@ class StatusCode {
 const statusCode = new StatusCode(200);
 ```
 
-`Allow Function`内の`this`は`StatusCode`クラスの`this`を参照するのに対し、`function()`はグローバオブジェクトの`this`を参照している。`global object`の`this`に`statusCode`は宣言していないので`undefined`となります。
+`Allow Function`内の`this`は`StatusCode`クラスの`this`を参照するのに対し、`function()`はグローバオブジェクトの`this`を参照している。グローバルオブジェクトの`this`に`statusCode`は宣言していないので`undefined`となります。
 
 ### Enhanced Object Literals
 
