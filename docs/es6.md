@@ -342,14 +342,11 @@ Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3
 
 ```
 getAsync(url1, (err, res) => {
-  if (err) { console.log(err) )
-  else {
-    getAsync(url2, (err, res) => {
-      getAsync(url3, (err, res) => {
-        //  すべてのデータを取得後の処理    
-      });
+  getAsync(url2, (err, res) => {
+    getAsync(url3, (err, res) => {
+      //  すべてのデータを取得後の処理    
     });
-  }
+  });
 });
 ```
 
