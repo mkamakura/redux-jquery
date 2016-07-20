@@ -328,7 +328,8 @@ function getAsyncPromise(url) {
 
 ```
 // Promise.all()のthen()はすべての処理が完了(resolve/reject)したら実行される
-Promise.all([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3)]).then(function(results) { console.log(results); }); 
+Promise.all([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3)])
+  .then(function(results) { console.log(results); }); 
 
 // Promise.race()のthen()はどれか一つでも完了(resolve/reject)したら実行される（他の処理が中断されることではない）
 Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3)]).then(function(results) { console.log(results); }); 
