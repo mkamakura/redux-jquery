@@ -315,9 +315,9 @@ function getAsyncPromise(url) {
   return new Promise((resolve, reject) => {
     request(url).end((err, res) => {
       if (err) {
-        reject(err);
+        reject(err); // catch()が実行されます
       } else {
-        resolve(res);
+        resolve(res); // then()が実行されます
       }
     });
   }
