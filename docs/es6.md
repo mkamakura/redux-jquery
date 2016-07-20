@@ -299,7 +299,7 @@ getAsync("https://github.com", (error, result) => {
 
 `Promise`を使った例
 ```js
-var promise = getAsyncPromise("https://github.com");
+const promise = getAsyncPromise("https://github.com");
 promise.then((result) => {
   // 取得成功の処理
 }).catch((error) => {
@@ -307,24 +307,21 @@ promise.then((result) => {
 });
 ```
 
-Promiseのworkflowを見てみましょう。
-```js
-function asyncFunction() {
-  return new Promise(function (resolve, reject)　{
-    setTimeout(function () {
-      if (false) { // この例では実行させない
-        reject(new Error('ERROR!'));
-      }
-　　　　resolve('Async Hello world');
-    }, 16);
-  });
-}
+`getAyncPromise()`は`Promise Object`を返す`function`です。処理が成功した場合は`then()`、失敗した場合は`catch()`が実行されます。
 
-asyncFunction().then(function (value) {
-　　console.log(value); // 'Async Hello world'
-}).catch(function (error) {
-　 console.log(error); // reject()が実行された場合はこの行が処理される
-});
+次に、`getAyncPromise()`の中身を見てみましょう。
+```js
+function getAsyncPromise(url) {
+  return new Promise((resolve, reject) => {
+    request(url).end((err, res) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(res);
+      }
+    });
+  }
+}
 ```
 
 ## おまけ:ES5で積極的に使ってほしい機能
