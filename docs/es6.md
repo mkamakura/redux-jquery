@@ -289,7 +289,7 @@ console.log(newTodo);
 
 `callback`を使った例
 ```js
-getAsync("fileA.txt", (error, result) => {
+getAsync("https://github.com", (error, result) => {
   if(error){// 取得失敗時の処理
     throw error;
   }
@@ -299,7 +299,7 @@ getAsync("fileA.txt", (error, result) => {
 
 `Promise`を使った例
 ```js
-var promise = getAsyncPromise("fileA.txt"); // textを取得してPromise Objectを返す
+var promise = getAsyncPromise("https://github.com");
 promise.then((result) => {
   // 取得成功の処理
 }).catch((error) => {
