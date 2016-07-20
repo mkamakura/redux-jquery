@@ -285,7 +285,7 @@ console.log(newTodo);
 
 ### Promise
 
-`callback`のような非同期プログラミングで使用する。
+`callback`のような非同期プログラミングで使用します。まずは、ウェブサイトからデータを取得する非同期処理を`callback`を使った場合と、`Promise`を使った場合で比較してみましょう。
 
 `callback`を使った例
 ```js
