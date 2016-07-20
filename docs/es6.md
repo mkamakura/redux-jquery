@@ -324,6 +324,9 @@ function getAsyncPromise(url) {
 }
 ```
 
+*※補足*
+*`Promise`以外にも`generator(ES2015)`や`aync function(ES Next)`のような非同期プログラミングをするための機能があります。*
+
 ## おまけ:ES5で積極的に使ってほしい機能
 
 ### Array.prototype.forEach\(\)
