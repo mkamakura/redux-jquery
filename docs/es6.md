@@ -229,7 +229,7 @@ APIがいくつか追加されました。ここでは`includes`と`repeat`、`s
 "abc".repeat(3) // "abcabcabc"
 
 "abcde".startsWith("abc") // true
-"abcde".startsWith("de") // true
+"abcde".startsWith("de") // faslse
 ```
 
 - includes()
