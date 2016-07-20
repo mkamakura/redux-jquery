@@ -220,17 +220,20 @@ console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
 
 ### String Object APIs
 
-APIがいくつか追加されました。ここでは`includes`と`repeat`を紹介します。その他の機能は[こちら](https://kangax.github.io/compat-table/es6/#test-String.prototype_methods)を参考にしてください。
+APIがいくつか追加されました。ここでは`includes`と`repeat`、`startsWith`を紹介します。その他の機能は[こちら](https://kangax.github.io/compat-table/es6/#test-String.prototype_methods)を参考にしてください。
 
 ```
 "abcde".includes("cd") // true 
 "abc".repeat(3) // "abcabcabc"
+"abcde".startsWith("abc") // true
 ```
 
 - includes()
  - 引数に指定した文字列が含まれていれば`true`、以外は`false`を返す
 - repeat()
  - 引数に指定した回数だけ繰り返した文字列を返す
+- startWith()
+ - 引数に指定した文字列で開始していれば`true`、以外は`false`を返す
 
 ### Spread
 
