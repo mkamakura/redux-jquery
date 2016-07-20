@@ -341,9 +341,9 @@ Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3
 このような機能のおかげで`callback地獄`になりにくいコード書くことができます。上記の`Promise.all()`の例を`callback`で書くこと以下のようになります。
 
 ```
-getAsync(url1, (res) => {
-  getAsync(url2, (res) => {
-    getAsync(url3, (res) => {
+getAsync(url1, (err, res) => {
+  getAsync(url2, (err, res) => {
+    getAsync(url3, (err, res) => {
       //  すべてのデータを取得後の処理    
     });
   });
