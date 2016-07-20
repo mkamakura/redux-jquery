@@ -69,7 +69,7 @@ function letTest() {
 }
 ```
 
-これは`var`が`global object`の`property`となるためです。(ブラウザの場合は`window object`)
+これは`var`がグローバルオブジェクトの`property`となるためです。(ブラウザの場合は`window object`)
 
 ```js
 var x = 'global';
