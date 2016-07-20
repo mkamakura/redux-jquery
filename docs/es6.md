@@ -307,9 +307,9 @@ promise.then((result) => {
 });
 ```
 
-`getAyncPromise()`は`Promise Object`を返す`function`です。処理が成功した場合は`then()`、失敗した場合は`catch()`が実行されます。
+`getAsyncPromise()`は`Promise Object`を返す`function`です。処理が成功した場合は`then()`、失敗した場合は`catch()`が実行されます。
 
-次に、`getAyncPromise()`の中身を見てみましょう。
+次に、`getAsyncPromise()`の中身を見てみましょう。
 ```js
 function getAsyncPromise(url) {
   return new Promise((resolve, reject) => {
