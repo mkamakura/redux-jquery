@@ -228,6 +228,11 @@ APIがいくつか追加されました。ここでは`includes`と`repeat`を�
 "abc".repeat(3) // "abcabcabc"
 ```
 
+- includes()
+ - 引数に指定した文字列が含まれていれば`true`、以外は`false`を返す
+- repeat()
+ - 引数に指定した回数だけ繰り返した文字列を返す
+
 ### Spread
 
 配列を展開して返します。
