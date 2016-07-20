@@ -220,7 +220,7 @@ console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
 
 ### String Object APIs
 
-APIがいくつか追加されました。ここでは`includes`と`repeat`を紹介します。
+APIがいくつか追加されました。ここでは`includes`と`repeat`を紹介します。その他の機能はこちらを参考にしてください。
 
 ```
 "abcde".includes("cd") // true 
