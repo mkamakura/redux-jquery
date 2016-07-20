@@ -324,6 +324,15 @@ function getAsyncPromise(url) {
 }
 ```
 
+`Promise`には`Promise.all()`という機能が用意されています。`Promise.all()`は並列に非同期処理を実行させることができます。
+
+```
+const lists = [getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3) ];
+
+// then()はすべての処理が完了したら実行される
+Promise.all(lists).then(function(results) { console.log(results); }); 
+```
+
 *※補足*
 *`Promise`以外にも`generator(ES2015)`や`aync function(ES Next)`のような非同期プログラミングをするための機能があります。*
 
