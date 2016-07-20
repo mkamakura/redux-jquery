@@ -332,7 +332,7 @@ const lists = [getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url
 // Promise.all()のthen()はすべての処理が完了したら実行される
 Promise.all(lists).then(function(results) { console.log(results); }); 
 
-// Promise.race()のthen()はどれか一つでも完了したら実行される
+// Promise.race()のthen()はどれか一つでも完了したら実行される（他の処理が中断されることではない）
 Promise.race(lists).then(function(results) { console.log(results); }); 
 ```
 
