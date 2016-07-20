@@ -344,7 +344,7 @@ Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3
 getAsync(url1, (err, res) => {
   getAsync(url2, (err, res) => {
     getAsync(url3, (err, res) => {
-      //  すべてのデータを取得後の処理    
+      //  すべてのデータを取得後の処理 
     });
   });
 });
