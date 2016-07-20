@@ -329,11 +329,13 @@ function getAsyncPromise(url) {
 ```
 // Promise.all()のthen()はすべての処理が完了(resolve/reject)したら実行される
 Promise.all([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3)])
-  .then(function(results) { console.log(results); }); 
+  .then(results => console.log(results))
+  .catch(error => console.log(error));
 
 // Promise.race()のthen()はどれか一つでも完了(resolve/reject)したら実行される（他の処理が中断されることではない）
 Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3)])
-  .then(function(results) { console.log(results); }); 
+  .then(results => console.log(results))
+  .cache(error => console.log(error)); 
 ```
 
 このような機能のおかげで`callback地獄`になりにくいコード書くことができます。上記の`Promise.all()`の例を`callback`で書くこと以下のようになります。
