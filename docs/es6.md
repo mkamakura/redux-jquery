@@ -313,7 +313,7 @@ promise.then((result) => {
 ```js
 function getAsyncPromise(url) {
   return new Promise((resolve, reject) => {
-    request(url).end((err, res) => {
+    request(url).end((err, res) => { // request()は指定したURLからデータを取得する架空の関数です
       if (err) {
         reject(err); // catch()が実行されます
       } else {
