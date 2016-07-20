@@ -218,6 +218,14 @@ function getNameObject(name) {
 console.log(getNameObject('Masaya Kamakura')); // {"fullName":"Masaya Kamakura"}
 ```
 
+### String Object APIs
+
+```
+// ES2015
+"abcde".includes("cd") // true 
+"abc".repeat(3) // "abcabcabc"
+```
+
 ### Spread
 
 配列を展開して返します。
