@@ -102,7 +102,7 @@ console.log(this.y); // undefined
 }
 ```
 
-配列やオブジェクトの要素も変更不可にするには`frozen`や[immutable.js](https://facebook.github.io/immutable-js/)
+配列やオブジェクトの要素も変更不可にするには[Object.freeze()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)や[immutable.js](https://facebook.github.io/immutable-js/)等を使うことになります。
 
 ### Templete Strings
 
