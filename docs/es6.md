@@ -91,7 +91,15 @@ console.log(this.y); // undefined
 ```
 
 `const`は変更不可と説明しましたが、配列やオブジェクトの要素は変更が可能です。
+
 ```js
+{
+  const a = [1,2,3];
+  a.push(4);
+  console.log(a); // 1,2,3,4
+
+  a = 42; // Type Error!
+}
 ```
 ### Templete Strings
 
