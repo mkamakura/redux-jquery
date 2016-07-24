@@ -264,7 +264,7 @@ APIがいくつか追加されました。ここでは`includes`と`repeat`、`s
 * repeat\(\)
   * 引数に指定した回数だけ繰り返した文字列を返す
 
-* startWith\(\)
+* startsWith\(\)
   * 引数に指定した文字列で開始していれば`true`、以外は`false`を返す
 
 
