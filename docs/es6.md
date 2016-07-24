@@ -282,6 +282,11 @@ const newList = [0, ...list];
 console.log(newList); // [0, 1, 2, 3]
 
 // Default Parametersと組み合わせて使う
+function foo(x, y, ...z) {
+  console.log(x, y, z);
+}
+
+foo(1, 2, 3, 4, 5); // 1 2 [3,4,5]
 ```
 
 ### Import\/Export
