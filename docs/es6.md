@@ -280,6 +280,8 @@ console.log(...list); // 1 2 3
 // 先頭に要素を追加する
 const newList = [0, ...list];
 console.log(newList); // [0, 1, 2, 3]
+
+// Default Parametersと組み合わせて使う
 ```
 
 ### Import\/Export
