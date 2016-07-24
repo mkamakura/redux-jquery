@@ -80,6 +80,16 @@ console.log(this.y); // undefined
 
 また、`var`との違いとして、`Temporal Dead Zone(TDZ)`があります。
 
+```js
+{
+  console.log(a); // undefined
+  console.log(b); // Reference Error!
+
+  var a;
+  let b;
+}
+```
+
 ### Templete Strings
 
 バッククォートを使った文字列の宣言ができます。メリットは文字列結合が簡単に書けることです。バッククォートで囲った文字列の`${}`は展開されます。またバッククォート内は改行できます。
