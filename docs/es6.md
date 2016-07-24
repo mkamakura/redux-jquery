@@ -156,6 +156,13 @@ console.log(admin.say()); // [Administrator] My name is Bob
 関数の引数にデフォルト値を設定できます。
 
 ```js
+// ES5
+function consoleName(name) {
+  name = (name != undefined) ? name : 'Taro';
+  console.log('username: ' + name);
+}
+
+// ES2015
 function consoleName(name = 'Taro') {
   console.log(`username: ${name}`);
 }
