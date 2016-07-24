@@ -101,6 +101,9 @@ console.log(this.y); // undefined
   a = 42; // Type Error!
 }
 ```
+
+配列やオブジェクトの要素も変更不可にするには`frozen`や[immutable.js](https://facebook.github.io/immutable-js/)
+
 ### Templete Strings
 
 バッククォートを使った文字列の宣言ができます。メリットは文字列結合が簡単に書けることです。バッククォートで囲った文字列の`${}`は展開されます。またバッククォート内は改行できます。
