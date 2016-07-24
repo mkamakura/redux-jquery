@@ -69,7 +69,7 @@ function letTest() {
 }
 ```
 
-これは`var`がグローバルオブジェクトの`property`となるためです。(ブラウザの場合は`window object`)
+これは`var`がグローバルオブジェクトの`property`となるためです。\(ブラウザの場合は`window object`\)
 
 ```js
 var x = 'global';
@@ -77,6 +77,8 @@ let y = 'global';
 console.log(this.x); // "global" 
 console.log(this.y); // undefined
 ```
+
+また、`var`との違いとして、`Temporal Dead Zone(TDZ)`があります。
 
 ### Templete Strings
 
@@ -232,12 +234,15 @@ APIがいくつか追加されました。ここでは`includes`と`repeat`、`s
 "abcde".startsWith("de") // false
 ```
 
-- includes()
- - 引数に指定した文字列が含まれていれば`true`、以外は`false`を返す
-- repeat()
- - 引数に指定した回数だけ繰り返した文字列を返す
-- startWith()
- - 引数に指定した文字列で開始していれば`true`、以外は`false`を返す
+* includes\(\)
+  * 引数に指定した文字列が含まれていれば`true`、以外は`false`を返す
+
+* repeat\(\)
+  * 引数に指定した回数だけ繰り返した文字列を返す
+
+* startWith\(\)
+  * 引数に指定した文字列で開始していれば`true`、以外は`false`を返す
+
 
 ### Spread
 
@@ -253,7 +258,7 @@ const newList = [0, ...list];
 console.log(newList); // [0, 1, 2, 3]
 ```
 
-### Import/Export
+### Import\/Export
 
 * `import`: 外部モジュールを読み込む
 * `export`: 外部モジュールで利用できるようにする
@@ -271,8 +276,6 @@ export default function foo() {};
 export function hoge1() {};
 export function hoge2() {};
 ```
-
-
 
 ### Object.assign\(target, ...sources\)
 
@@ -295,6 +298,7 @@ console.log(newTodo);
 `callback`のような非同期プログラミングで使用します。まずは、ウェブサイトからデータを取得する非同期処理を`callback`を使った場合と、`Promise`を使った場合で比較してみましょう。
 
 `callback`を使った例
+
 ```js
 getAsync("https://github.com", (error, result) => {
   if(error){// 取得失敗時の処理
@@ -305,6 +309,7 @@ getAsync("https://github.com", (error, result) => {
 ```
 
 `Promise`を使った例
+
 ```js
 const promise = getAsyncPromise("https://github.com");
 promise.then((result) => {
@@ -317,6 +322,7 @@ promise.then((result) => {
 `getAsyncPromise()`は`Promise Object`を返す`function`です。処理が成功した場合は`then()`、失敗した場合は`catch()`が実行されます。
 
 次に、`getAsyncPromise()`の中身を見てみましょう。
+
 ```js
 function getAsyncPromise(url) {
   return new Promise((resolve, reject) => {
@@ -345,7 +351,7 @@ Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3
   .cache(error => console.log(error)); 
 ```
 
-このような機能のおかげで`callback地獄`になりにくいコード書くことができます。上記の`Promise.all()`の例を`callback`で書くこと以下のようになります。(error処理は省略)
+このような機能のおかげで`callback地獄`になりにくいコード書くことができます。上記の`Promise.all()`の例を`callback`で書くこと以下のようになります。\(error処理は省略\)
 
 ```
 getAsync(url1, (err, res) => {
@@ -357,8 +363,8 @@ getAsync(url1, (err, res) => {
 });
 ```
 
-*※補足*
-*`Promise`以外にも`generator(ES2015)`や`aync function(ES Next)`のような非同期プログラミングをするための機能があります。*
+_※補足_
+`Promise`_以外にも_`generator(ES2015)`_や_`aync function(ES Next)`_のような非同期プログラミングをするための機能があります。_
 
 ## おまけ:ES5で積極的に使ってほしい機能
 
@@ -412,8 +418,8 @@ console.log(max); // 5
 
 **sumの例**
 
-| | pre | current | return |
-| :--- | :--- | :--- |
+|  | pre | current | return |
+| :--- | :--- | :--- | :--- |
 | 1st | 1 | 2 | 3 |
 | 2nd | 3 | 3 | 6 |
 | 3rd | 6 | 4 | 10 |
@@ -423,8 +429,8 @@ console.log(max); // 5
 
 **maxの例**
 
-| | pre | current | return |
-| :--- | :--- | :--- |
+|  | pre | current | return |
+| :--- | :--- | :--- | :--- |
 | 1st | 1 | 2 | 2 |
 | 2nd | 2 | 3 | 3 |
 | 3rd | 3 | 4 | 4 |
