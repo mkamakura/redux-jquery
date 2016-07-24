@@ -78,7 +78,7 @@ console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
 
-また、`var`との違いとして、`Temporal Dead Zone(TDZ)`があります。
+また、`var`との違いとして、`Temporal Dead Zone(TDZ)`があります。変数宣言は、ブロックの先頭か、変数を使用する直前で宣言するようにしましょう。
 
 ```js
 {
