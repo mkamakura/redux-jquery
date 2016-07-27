@@ -9,7 +9,7 @@ git clone https://github.com/mkamakura/redux-jquery.git
 cd redux-jquery && npm i
 npm start
 ```
-Lunch local server and watchify.
+Launch local server and watchify.
 
 ## Contribution
 1. Fork it!
