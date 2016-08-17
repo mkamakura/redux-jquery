@@ -8,7 +8,7 @@
 
 ### ES6 or ES2015?
 
-ネット上で`ES6`と`ES2015`を見かけると思いますが、両方とも同じものを指しています。正確には`ES2015`が正しいです。来年以降も`ES2016`,`ES2017`…とアップデート予定です。当初は`ES6`として仕様検討が始まったためその名残りです。
+ネット上で`ES6`と`ES2015`を見かけると思いますが、両方とも同じものを指しています。正確には`ES2015`が正しいです。来年以降も`ES2016`,`ES2017`…とアップデート予定です。当初は`ES6`として仕様検討が始まったためその名残りで残っています。
 
 ### Babel
 
@@ -187,11 +187,9 @@ $('.hoge').on('change', (event) => {
 });
 // 中身が式なら`{}`を省略可能
 $('.hoge').on('change', (event) => console.log(event));
-// 引数が1つの場合は`()`を省略可能
-$('.hoge').on('change', event => console.log(event));
 
 // 式で書いた場合は、結果がreturnされます
-const multify = val => val * val;
+const multify = (val) => val * val;
 console.log(multify(5)); // 25
 ```
 
@@ -274,7 +272,6 @@ APIがいくつか追加されました。ここでは`includes`と`repeat`、`s
 * startsWith\(\)
   * 引数に指定した文字列で開始していれば`true`、以外は`false`を返す
 
-
 ### Spread
 
 配列を展開して返します。
@@ -332,12 +329,12 @@ console.log(newTodo);
 
 ### Promise
 
-`callback`のような非同期プログラミングで使用します。まずは、ウェブサイトからデータを取得する非同期処理を`callback`を使った場合と、`Promise`を使った場合で比較してみましょう。
+`callback`のような非同期プログラミングで使用する。
 
 `callback`を使った例
 
 ```js
-getAsync("https://github.com", (error, result) => {
+getAsync("fileA.txt", (error, result) => {
   if(error){// 取得失敗時の処理
     throw error;
   }
@@ -348,7 +345,7 @@ getAsync("https://github.com", (error, result) => {
 `Promise`を使った例
 
 ```js
-const promise = getAsyncPromise("https://github.com");
+var promise = getAsyncPromise("fileA.txt"); // textを取得してPromise Objectを返す
 promise.then((result) => {
   // 取得成功の処理
 }).catch((error) => {
@@ -361,16 +358,15 @@ promise.then((result) => {
 次に、`getAsyncPromise()`の中身を見てみましょう。
 
 ```js
-function getAsyncPromise(url) {
-  return new Promise((resolve, reject) => {
-    request(url).end((err, res) => { // request()は指定したURLからデータを取得する架空の関数です
-      if (err) {
-        reject(err); // catch()が実行されます
-      } else {
-        resolve(res); // then()が実行されます
+function asyncFunction() {
+  return new Promise(function (resolve, reject)　{
+    setTimeout(function () {
+      if (false) { // この例では実行させない
+        reject(new Error('ERROR!'));
       }
-    });
-  }
+      resolve('Async Hello world');
+    }, 16);
+  });
 }
 ```
 
@@ -390,13 +386,10 @@ Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3
 
 このような機能のおかげで`callback地獄`になりにくいコード書くことができます。上記の`Promise.all()`の例を`callback`で書くこと以下のようになります。\(error処理は省略\)
 
-```
-getAsync(url1, (err, res) => {
-  getAsync(url2, (err, res) => {
-    getAsync(url3, (err, res) => {
-      //  すべてのデータを取得後の処理 
-    });
-  });
+asyncFunction().then(function (value) {
+  console.log(value); // 'Async Hello world'
+}).catch(function (error) {
+  console.log(error); // reject()が実行された場合はこの行が処理される
 });
 ```
 
