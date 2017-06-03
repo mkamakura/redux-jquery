@@ -386,6 +386,7 @@ Promise.race([getAsyncPromise(url1), getAsyncPromise(url2), getAsyncPromise(url3
 
 このような機能のおかげで`callback地獄`になりにくいコード書くことができます。上記の`Promise.all()`の例を`callback`で書くこと以下のようになります。\(error処理は省略\)
 
+```
 asyncFunction().then(function (value) {
   console.log(value); // 'Async Hello world'
 }).catch(function (error) {
