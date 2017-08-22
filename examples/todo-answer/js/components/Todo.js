@@ -27,9 +27,10 @@ export default class Todo extends BaseComponent {
   }
 
   render() {
-    this.$todoList.html(this.state.todo.map((todo) => {
-      if (this.state.tab === TAB.ALL || this.state.tab === todo.status) return this.renderTodo(todo);
-    }));
+    this.$todoList.html(this.state.todo
+        .filter((todo) => this.state.tab === TAB.ALL || this.state.tab === todo.status)
+        .map((todo) => this.renderTodo(todo))
+    );
   }
 
   renderTodo(todo) {

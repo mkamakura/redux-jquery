@@ -24,7 +24,7 @@
 | Chrome | V8 |
 | Opera | V8 |
 | Safari | JavaScriptCore |
-| FireFox | SpiderMonkey |
+| Firefox | SpiderMonkey |
 
 **Babel**
 
@@ -353,7 +353,7 @@ promise.then((result) => {
 });
 ```
 
-`getAsyncPromise()`は`Promise Object`を返す`function`です。処理が成功した場合は`then()`、失敗した場合は`catch()`が実行されます。
+`getAsyncPromise()`は`Promise Object`を返す`function`です。処理が成功した場合`then()`。失敗した場合`catch()`が実行されます。
 
 次に、`getAsyncPromise()`の中身を見てみましょう。
 
